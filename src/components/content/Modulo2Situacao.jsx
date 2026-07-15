@@ -90,8 +90,52 @@ const Modulo2Situacao = () => {
           >
             <div className="max-w-3xl">
 
-              <p className="text-base md:text-lg font-medium text-white pb-8">
-                Como vimos no módulo 1, o programa de educação financeira Aprendendo a Lidar com dinheiro, propõe que os(as) educadores(as) trabalhem os conteúdos do Livro do Estudante por meio da Aprendizagem Baseada em Projetos, realizando atividades de curta duração que são chamados de PEQUENOS PROJETOS DIDÁTICOS ATIVOS (PPDAs) e objetivando desenvolver o protagonismo dos estudantes e potencializar o aprendizado, o desenvolvimento de habilidades e a percepção da importância do tema para suas vidas.
+              <p className="text-base md:text-lg font-medium text-white pb-8 leading-relaxed">
+                Como vimos no 
+                <span className="bg-white text-blue-700 font-semibold px-2 py-0.5 rounded-md mx-1">
+                  módulo 1
+                </span>, 
+                o programa de 
+                <span className="bg-white text-blue-700 font-semibold px-2 py-0.5 rounded-md mx-1">
+                  educação financeira
+                </span> 
+                <span className="bg-white text-blue-700 font-semibold px-2 py-0.5 rounded-md mx-1">
+                  Aprendendo a Lidar com Dinheiro
+                </span>, propõe que os(as) 
+                <span className="bg-white text-blue-700 font-semibold px-2 py-0.5 rounded-md mx-1">
+                  educadores(as)
+                </span> 
+                trabalhem os conteúdos do 
+                <span className="bg-white text-blue-700 font-semibold px-2 py-0.5 rounded-md mx-1">
+                  Livro do Estudante
+                </span> 
+                por meio da 
+                <span className="bg-white text-blue-700 font-semibold px-2 py-0.5 rounded-md mx-1">
+                  Aprendizagem Baseada em Projetos
+                </span>, realizando 
+                <span className="bg-white text-blue-700 font-semibold px-2 py-0.5 rounded-md mx-1">
+                  atividades de curta duração
+                </span> 
+                que constituem 
+                <span className="bg-white text-blue-700 font-semibold px-2 py-0.5 rounded-md mx-1">
+                  projetos
+                </span> 
+                que objetivam desenvolver o 
+                <span className="bg-white text-blue-700 font-semibold px-2 py-0.5 rounded-md mx-1">
+                  protagonismo dos estudantes
+                </span> 
+                e potencializar o 
+                <span className="bg-white text-blue-700 font-semibold px-2 py-0.5 rounded-md mx-1">
+                  aprendizado
+                </span>, o 
+                <span className="bg-white text-blue-700 font-semibold px-2 py-0.5 rounded-md mx-1">
+                  desenvolvimento de habilidades
+                </span> 
+                e a 
+                <span className="bg-white text-blue-700 font-semibold px-2 py-0.5 rounded-md mx-1">
+                  percepção da importância
+                </span> 
+                do tema para suas vidas.
               </p>
               
             </div>
