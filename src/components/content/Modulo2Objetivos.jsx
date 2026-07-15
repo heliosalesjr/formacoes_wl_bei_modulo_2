@@ -10,17 +10,17 @@ const objetivos = [
   {
     icon: <FaChalkboardTeacher size={32} className="text-blue-600" />,
     title: 'Projetos do Ano',
-    description: 'Conhecer os projetos sugeridos ao longo dos livros de 4o e 5o anos'
+    description: 'Conhecer os projetos sugeridos e sua estrutura.'
   },
   {
     icon: <FaBookOpen size={32} className="text-red-500" />,
     title: 'Matriz de habilidades',
-    description: 'Conhecer e interpretar a Matriz de habilidades'
+    description: 'Conhecer e interpretar a Matriz de habilidades.'
   },
   {
     icon: <FaUsers size={32} className="text-green-500" />,
     title: 'Ferramentas de Planejamento',
-    description: 'Conhecer as ferramentas SMART e 5W2H'
+    description: 'Conhecer as ferramentas SMART e 5W2H.'
   },
 ]
 

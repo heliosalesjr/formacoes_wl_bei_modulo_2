@@ -1,8 +1,6 @@
-"use client";
-import { useEffect, useRef } from 'react'
-import { useSidebar } from '@/contexts/SidebarContext'
-import { titleFont } from '@/lib/fonts'
-import Image from 'next/image'
+'use client'
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
 
 import {
   Accordion,
@@ -13,204 +11,133 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion } from "framer-motion"
 
-// --- Dados das atividades do 4º ano ---
-const atividades4ano = [
+const passos = [
   {
-    title: "Capítulo 1 — Exposição das profissões",
-    content: `
-Os alunos fazem uma pesquisa sobre duas profissões diferentes, descrevendo suas funções e importância social. A proposta estimula a valorização de todo tipo de trabalho e a compreensão das funções na sociedade. (página 8)`,
+    title: "Passo 1: Turma",
+    content: `Especificar a que turma será aplicado este roteiro.`,
   },
   {
-    title: "Capítulo 1 — Pesquisa de preços",
-    content: `
-O objetivo desta atividade é comparar os preços dos itens da padaria mencionados na aula com os preços reais de uma padaria local, entendendo a dinâmica dos preços. (página 12)`,
+    title: "Passo 2: Duração do projeto",
+    content: `Quantas aulas vai durar o projeto?`,
   },
   {
-    title: "Capítulo 1 — Entrevistando um adulto",
-    content: `
-Os alunos entrevistam um adulto sobre sua profissão, registrando as respostas em um roteiro de perguntas. A ideia é compreender a rotina profissional e o valor social do trabalho, exercitando oralidade, escuta e escrita. (página 25)`,
+    title: "Passo 3: Tema",
+    content: `O tema deve ser, de preferência, escolhido junto com a turma.`,
   },
   {
-    title: "Capítulo 2 — Encarte de preços",
-    content: `
-Os estudantes pesquisam preços de produtos ou alimentos para comparar valores e refletir sobre diferenças de custo e escolhas de consumo consciente, aplicando noções básicas de cálculo e comparação de preços. (página 43)`,
+    title: "Passo 4: Perfil da turma",
+    content: `Sugerimos a aplicação das ferramentas apresentadas no Item 2, “Como engajar os estudantes?” (pp. 8-12), deste caderno.`,
   },
   {
-    title: "Capítulo 4 — O que quero comprar?",
-    content: `
-Os alunos escolhem um produto que desejam comprar com o dinheiro, estimulando autonomia e discernimento. (página 65)`,
+    title: "Passo 5: Fator de mobilização",
+    content: `Um desafio proposto aos estudantes a partir do que foi levantado no diagnóstico do educador, com base no que motiva e desperta o interesse da turma. Esse desafio pode ser, por exemplo, algo a ser construído (uma maquete, um livro ou uma horta), uma habilidade a ser desenvolvida (aprender a aplicar os primeiros socorros, jogar xadrez ou ler em público), uma apresentação a ser organizada (uma peça de teatro, uma dança, um experimento científico ou um truque de mágica) ou um evento a ser planejado e organizado pelos estudantes (uma exposição artística, um seminário, uma festa, um passeio ou um torneio esportivo). Enfim, é aquilo que a turma pode colocar em prática a partir do conhecimento teórico adquirido.`,
   },
   {
-    title: "Capítulo 5 — Anúncio de promoção",
+    title: "Passo 6: Habilidades específicas da BNCC",
     content: `
-Os alunos pesquisam promoções no dia a dia, para entender como funcionam e quais estratégias são usadas para atrair consumidores. (página 75)`,
-  },
-  {
-    title: "Capítulo 5 — Anúncio de parcelamento",
-    content: `
-Os alunos pesquisam exemplos de parcelamento e refletem sobre as vantagens e cuidados ao comprar dessa forma. (página 82)`,
-  },
-  {
-    title: "Capítulo 6 — Reciclar garrafas de plástico",
-    content: `
-Os alunos devem separar garrafas plásticas usadas em casa, lavá-las e levá-las à escola para coleta. Em sala, calculam quantas garrafas juntaram e projetam o total até o fim do ano, promovendo educação ambiental e cálculo aplicado. (página 93)`,
-  },
-  {
-    title: "Capítulo 6 — Cartaz de economia",
-    content: `
-Os alunos produzem um cartaz sobre economia e sustentabilidade, estimulando responsabilidade coletiva e hábitos conscientes. (página 94)`,
-  },
-]
+Que habilidades trabalhar? Para cada uma delas, o educador deve definir os conteúdos conceituais, procedimentais e atitudinais.
 
-// --- Dados das atividades do 5º ano ---
-const atividades5ano = [
-  {
-    title: "Capítulo 2 — Pesquisa de preços",
-    content: `
-O projeto convida os alunos a iniciarem a organização de uma festa de aniversário da turma. Eles precisam realizar uma pesquisa de preços em dois mercados diferentes, registrando tudo o que descobrirem. A atividade introduz, na prática, o conceito de comparação de preços e mostra como esse hábito ajuda a tomar decisões de compra mais conscientes e econômicas. (página 26)`,
+A. Conteúdos conceituais:
+
+São conteúdos que dizem respeito ao “saber conhecer”. Estão relacionados aos conceitos que se quer trabalhar.
+
+➡ Quais conceitos os estudantes precisam saber? Exemplo: compreender o conceito de Economia.
+
+B. Conteúdos procedimentais:
+
+São aqueles que envolvem o “saber fazer”, ou seja, a realização de ações e de exercícios de reflexão sobre a própria atividade e sua aplicação em diferentes contextos. Tornam claro o caráter significativo do que é ensinado e sua aplicação no dia a dia.
+
+➡ Que procedimentos os estudantes precisam saber? Exemplos: aplicar a Matemática nos trabalhos que foram propostos pelo professor; aplicar a Matemática em situações-problema; calcular uma grandeza proporcional a outra por meio de regra de três; resolver uma equação; construir um gráfico.
+
+C. Conteúdos atitudinais:
+
+Estão ligados ao “saber ser”. A formação e a mudança de atitudes podem acontecer em três dimensões:
+i. cognitiva – conhecimentos e crenças;
+ii. afetiva – sentimentos e preferências;
+iii. de conduta – ações manifestas e declaração de intenções.
+
+➡ Que atitudes os estudantes precisam observar ao longo do projeto? Em quais delas esperam-se mudanças? Exemplos: compreender e respeitar as opiniões dos colegas em um projeto colaborativo; tomar decisões dentro do projeto que está sendo desenvolvido; ter responsabilidade com a atribuição que assumiu dentro do grupo de trabalho.
+`,
   },
   {
-    title: "Capítulo 3 — Embalagem grande ou pequena?",
-    content: `
-Os alunos devem visitar um mercado para comparar preços e tamanhos de embalagens do mesmo produto, observando se compensa mais comprar a versão grande ou a pequena. Eles anotam marca, peso/volume e preço de achocolatado e refrigerantes, comparando produtos iguais sempre que possível. (Página 42)`,
+    title: "Passo 7: Atividades",
+    content: `Escolher as atividades a serem desenvolvidas em cada aula para trabalhar os conteúdos previstos e alcançar os objetivos desejados. Descrever as estratégias para as aulas. Que habilidades (definidas como importantes por meio do perfil da turma) o educador vai trabalhar, qual conteúdo utilizará e como se dará o desenvolvimento das habilidades listadas. O arranjo deve concatenar as habilidades com os conteúdos e atividades que o educador propôs aos jovens desenvolver. Montar um plano de atividades, detalhando a primeira parte: como apresentar o seu PPDA para a turma; como eles podem desenvolver o fator de mobilização que o educador solicitou; como podem se organizar. As partes posteriores serão detalhadas à medida que forem definidas, a depender das decisões tomadas junto com os jovens.
+
+Dica: certifique-se de considerar as habilidades e competências, bem como os interesses, conhecimentos e práticas dos estudantes quanto aos assuntos abordados, para saber como ampliar o conhecimento dos conteúdos desenvolvidos. Isso ajuda a propor atividades estimulantes e motivadoras. Em geral, uma atividade é estimulante e motivadora quando propõe desafios passíveis de serem superados. As atividades devem ser planejadas de maneira que uma ocorra após a outra, dando sentido à sequência estabelecida a fim de atingir cada objetivo estabelecido.`,
   },
   {
-    title: "Capítulo 4 — Dividindo com os amigos",
-    content: `
-Nesta etapa do projeto da festa, os alunos aprendem a planejar a quantidade de comida e bebida necessária para todos os participantes. Eles escolhem um salgado, um doce e uma bebida e registram no quadro. Depois, definem a quantidade por estudante e multiplicam pelos participantes, calculando a quantidade total a ser comprada. (Página 48)`,
+    title: "Passo 8: Avaliação de percurso e de resultados",
+    content: `É importante que, para cada atividade ou bloco de atividades, o educador programe e dedique um tempo específico para conferir se está atingindo os objetivos do PPDA. Um bom plano de avaliação contém indicadores ou evidências de aprendizagem de acordo com cada objetivo elencado (o que se pretende que os estudantes demonstrem ou façam para comprovar seu progresso no alcance das metas estabelecidas?), formas de verificação (podem ser usadas vários instrumentos, como apresentações, seminários, peças de teatro, pesquisas, debate, prova escrita, autoavaliação etc.) e um momento de verificação, ou seja, de observação durante a atividade ou ao fim de um conjunto de atividades.`,
   },
   {
-    title: "Capítulo 4 — O orçamento da festa",
-    content: `
-A turma define, junto com a professora, um valor total de orçamento para a festa. Em grupos, escolhem comidas, bebidas, ingredientes e quantidades, pesquisam preços e montam suas tabelas de orçamento, cuidando para não ultrapassar o limite. Depois, apresentam e decidem se combinam ideias ou votam em um único orçamento coletivo. (Página 56)`,
+    title: "Passo 9: Apresentação aos estudantes e finalização",
+    content: `Com o PPDA estruturado, o educador deve apresentá-lo à turma. Nesse momento, ele pode ser ajustado e finalizado com a ajuda dos jovens, para que o educador, em seguida, dê início às atividades, conforme planejado.`,
   },
   {
-    title: "Capítulo 5 — Criando minha própria loja",
-    content: `
-Os alunos imaginam que possuem sua própria loja, escolhem o que gostariam de vender e criam um cartaz ilustrando sua loja e produtos. Depois, conversam com colegas sobre outras ideias de negócio, anotam cinco sugestões e circulam a que mais chamou sua atenção. A proposta estimula criatividade, visão empreendedora e troca de ideias. (Página 75)`,
-  },
-  {
-    title: "Capítulo 6 — Exposição das propagandas",
-    content: `
-Após produzirem diversas propagandas ao longo do ano, os alunos organizam uma exposição com as peças criadas. Definem data, local e forma de organização (por tema, ordem cronológica ou outro critério). Depois, criam um cartaz de divulgação e espalham pela escola, convidando a comunidade. (Página 90)`,
+    title: "Passo 10: Culminância para celebração e apresentação dos resultados",
+    content: `O educador deve marcar, junto com os estudantes e com a gestão da escola, uma data para apresentar os resultados do projeto para o público a ser escolhido: outros professores, outras turmas, a comunidade do bairro, entre outros.`,
   },
 ]
 
 export default function Modulo2Content() {
-  const ref = useRef()
-  const { markAsViewed } = useSidebar()
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          markAsViewed('modulo-2-content')
-        }
-      },
-      { threshold: 0.5 }
-    )
-
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [markAsViewed])
+  const ref = useRef();
+    const { markAsViewed } = useSidebar();
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            markAsViewed('modulo-2-ppda');
+          }
+        },
+        { threshold: 0.5 }
+      );
+  
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+  
+      return () => observer.disconnect();
+    }, [markAsViewed]);
 
   return (
-    <section
-      ref={ref}
-      id="modulo-2-content"
-      className="scroll-mt-20 max-w-5xl mx-auto my-16 py-8 px-4 sm:px-6 lg:px-8"
-    >
+    <section ref={ref} id="modulo-2-ppda" className="scroll-mt-20 max-w-5xl mx-auto my-16 py-4 px-4 sm:px-6 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <Card className="w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-visible">
-          <CardHeader className="text-center">
-            <CardTitle className={`${titleFont.className} text-2xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent dark:bg-none dark:text-white`}>
-              Atividades de Projeto do Livro
+        <Card className="w-full bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-blue-100 dark:border-slate-700">
+          <CardHeader>
+            <CardTitle className="text-2xl sm:text-3xl font-bold text-slate-700 dark:text-white text-center">
+              Como elaborar um roteiro do PPDA
             </CardTitle>
-            <p className="text-slate-600 dark:text-slate-300 text-base mt-4 max-w-2xl mx-auto">
-              Nos livros, há séries de atividades que valem ponto na <strong>Gincana da Educação Financeira</strong>,
-              que funcionam como pequenos projetos.
-            </p>
           </CardHeader>
-
-          <CardContent className="py-8 px-4 space-y-12 overflow-visible">
-            {/* --- Atividades do 4º ano --- */}
-            <div className="pb-4 overflow-visible">
-              <div className="flex justify-center mb-8">
-                <div className="relative w-80 h-64 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
-                  <Image
-                    src="/livros-4o-5o.png"
-                    alt="Livros do 4º ano"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-
-              <h3 className={`${titleFont.className} text-3xl font-bold text-red-600 dark:text-red-400 text-center mb-6`}>
-                Atividades do 4º ano
-              </h3>
-              <div className="p-2 pb-4">
-                <Accordion type="multiple" className="space-y-3">
-                  {atividades4ano.map((item, i) => (
-                    <AccordionItem
-                      key={i}
-                      value={`ano4-item-${i}`}
-                      className="border-2 border-red-200 dark:border-red-900/50 rounded-lg hover:border-red-300 dark:hover:border-red-700 transition-colors"
-                    >
-                      <AccordionTrigger className="text-left font-semibold text-slate-800 dark:text-slate-100 text-lg px-4 py-3 hover:bg-orange-50 dark:hover:bg-orange-950/30 rounded-md transition-colors">
-                        {item.title}
-                      </AccordionTrigger>
-                      <AccordionContent className="px-4 py-4 text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line text-[1rem] bg-gradient-to-b from-orange-50/30 to-transparent dark:from-orange-950/20">
-                        {item.content}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
-            </div>
-
-            {/* --- Atividades do 5º ano --- */}
-            <div className="pb-4 overflow-visible">
-              <div className="flex justify-center mb-8">
-                <div className="relative w-80 h-64 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
-                  <Image
-                    src="/livros-4o-5o.png"
-                    alt="Livros do 5º ano"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </div>
-
-              <h3 className={`${titleFont.className} text-3xl font-bold text-purple-700 dark:text-purple-400 text-center mb-6`}>
-                Atividades do 5º ano
-              </h3>
-              <div className="p-2 pb-4">
-                <Accordion type="multiple" className="space-y-3">
-                  {atividades5ano.map((item, i) => (
-                    <AccordionItem
-                      key={i}
-                      value={`ano5-item-${i}`}
-                      className="border-2 border-purple-200 dark:border-purple-900/50 rounded-lg hover:border-purple-300 dark:hover:border-purple-700 transition-colors"
-                    >
-                      <AccordionTrigger className="text-left font-semibold text-slate-800 dark:text-slate-100 text-lg px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-950/30 rounded-md transition-colors">
-                        {item.title}
-                      </AccordionTrigger>
-                      <AccordionContent className="px-4 py-4 text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line text-[1rem] bg-gradient-to-b from-blue-50/30 to-transparent dark:from-blue-950/20">
-                        {item.content}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
+          <CardContent className="py-6">
+            <div className="space-y-4 text-base">
+            <Accordion type="multiple">
+                {passos.map((passo, i) => (
+                <AccordionItem
+                    value={`item-${i}`}
+                    key={i}
+                    className="border border-blue-100 dark:border-slate-700 rounded-lg"
+                >
+                    <AccordionTrigger className="text-left font-semibold text-slate-800 dark:text-slate-200 text-lg px-4 py-3 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-md">
+                    {passo.title}
+                    </AccordionTrigger>
+                    <AccordionContent className="px-4 py-4 text-slate-700 dark:text-slate-300 leading-relaxed whitespace-pre-line text-[1rem]">
+                    {passo.content}
+                    </AccordionContent>
+                </AccordionItem>
+                ))}
+            </Accordion>
             </div>
           </CardContent>
         </Card>
+
+       
       </motion.div>
     </section>
   )
