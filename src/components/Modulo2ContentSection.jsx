@@ -7,6 +7,7 @@ import Modulo2Situacao from "@/components/content/Modulo2Situacao"
 import Modulo2Passo from "@/components/content/Modulo2Passo"
 import Modulo2Content from "@/components/content/Modulo2Content"
 import Modulo2PPDA from "@/components/content/Modulo2PPDA"
+import Modulo2AoFinal from "@/components/content/Modulo2AoFinal"
 
 export default function Modulo2ContentSection() {
   return (
@@ -37,6 +38,11 @@ export default function Modulo2ContentSection() {
           <FadeInWhenVisible>
             <Modulo2PPDA />
           </FadeInWhenVisible>
+
+          <FadeInWhenVisible>
+            <Modulo2AoFinal />
+          </FadeInWhenVisible>
+            
 
           <div className="flex justify-center mt-8">
             <Button asChild size="lg">
