@@ -31,7 +31,7 @@ const Modulo2Intro = () => {
   }, [markAsViewed]);
 
   return (
-    <div className="p-16 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl mx-auto max-w-5xl">
+    <div className="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl mx-auto max-w-5xl">
 
       {/* === TÍTULO + PARÁGRAFO + IMAGEM === */}
       <div ref={ref} id="modulo-2-intro" className="scroll-mt-20 space-y-6 w-full">
@@ -40,7 +40,7 @@ const Modulo2Intro = () => {
         </h2>
 
         <p className="text-slate-700 dark:text-slate-200 text-lg leading-relaxed">
-          Dando seguimento à formação sobre a coleção
+          Dando sequência à formação sobre a coleção
           <strong> Aprendendo a Lidar com Dinheiro</strong>,
           o <strong>Módulo 2</strong> aprofunda o planejamento de aulas e projetos. Esta formação integra as ações de acompanhamento pedagógico da <strong>BEĨ Educação</strong>, voltada aos educadores que lecionam Matemática para as respectivas turmas, no formato autoinstrucional.
         </p>
@@ -71,7 +71,7 @@ const Modulo2Intro = () => {
 
 
       {/* === CARDS DE CONTEÚDO === */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-16">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 py-10">
         <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-slate-800 dark:to-slate-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition duration-300 flex items-center justify-center text-center">
           <p className="text-slate-700 dark:text-slate-200 text-base leading-relaxed max-w-xs">
             Este módulo amplia e aprofunda os conteúdos, fomentando o desenvolvimento profissional e apresentando novas estratégias para o ensino da educação financeira de maneira significativa e envolvente.
