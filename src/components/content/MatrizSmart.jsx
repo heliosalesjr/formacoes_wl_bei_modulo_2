@@ -50,7 +50,7 @@ const MatrizSmart = () => {
           “pensem no futuro” ou “economizem dinheiro”. Metas vagas geram
           frustração. Já as metas bem definidas ajudam a desenvolver senso de
           direção, responsabilidade e autonomia. Por isso, dentro do programa{" "}
-          <strong>Aprendendo a Lidar com o Dinheiro</strong>, apresentamos as metas SMART como uma metodologia prática para ensinar os
+          <strong>Aprendendo a Lidar com Dinheiro</strong>, apresentamos as metas SMART como uma metodologia prática para ensinar os
           estudantes a formularem metas mais conscientes e realizáveis.
         </p>
 
