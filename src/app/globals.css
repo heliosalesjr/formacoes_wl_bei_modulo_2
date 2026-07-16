@@ -127,8 +127,8 @@ body {
   overflow-x: hidden;
   background: linear-gradient(
     125deg,
-    #d1fae5 0%,
-    #ecfdf5 20%,
+    #ffedd5 0%,
+    #fff7ed 20%,
     #f8fafc 45%,
     #eff6ff 70%,
     #dbeafe 100%
@@ -140,7 +140,7 @@ body {
 html.dark body {
   background: linear-gradient(
     125deg,
-    #0a6648 0%,
+    #9a3412 0%,
     #243548 22%,
     #243040 50%,
     #223260 72%,
