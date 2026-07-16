@@ -12,12 +12,8 @@ const navigation = {
     path: '/matrizhabilidades',
     components: []
   },
-  'Ferramentas SMART': {
-    path: '/ferramentassmart',
-    components: []
-  },
-  'Ferramentas 5W2H': {
-    path: '/ferramentas5w2h',
+  'Ferramentas de Planejamento': {
+    path: '/ferramentas',
     components: []
   },
   'Encerramento': {

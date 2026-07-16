@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-export default function Ferramentas5w2hContentSection() {
+export default function FerramentasContentSection() {
   return (
     <section id="content" className="w-full pt-6 pb-12 md:pt-8 md:pb-20">
       <div className="container mx-auto px-4 md:px-6">

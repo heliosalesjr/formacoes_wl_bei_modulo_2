@@ -8,8 +8,7 @@ import { usePathname } from "next/navigation"
 const navLinks = [
   { name: "Módulo 2",              short: "Módulo 2",  href: "/" },
   { name: "Matriz de Habilidades", short: "Matriz",    href: "/matrizhabilidades" },
-  { name: "Ferramentas SMART",     short: "SMART",     href: "/ferramentassmart" },
-  { name: "Ferramentas 5W2H",      short: "5W2H",      href: "/ferramentas5w2h" },
+  { name: "Ferramentas de Planejamento", short: "Ferramentas", href: "/ferramentas" },
   { name: "Encerramento",          short: "Encerr.",   href: "/encerramento" },
 ]
 

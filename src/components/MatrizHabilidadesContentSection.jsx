@@ -25,7 +25,7 @@ export default function MatrizHabilidadesContentSection() {
 
           <div className="flex justify-center mt-8">
             <Button asChild size="lg">
-              <Link href="/ferramentassmart">Próxima Página: Ferramentas SMART</Link>
+              <Link href="/ferramentas">Próxima Página: Ferramentas de Planejamento</Link>
             </Button>
           </div>
 

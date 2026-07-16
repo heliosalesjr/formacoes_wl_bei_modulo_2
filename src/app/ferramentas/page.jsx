@@ -2,20 +2,20 @@ import Navbar from "@/components/Navbar"
 import HeroBento from "@/components/HeroBento"
 import Footer from "@/components/Footer"
 import ProgressBar from "@/components/ProgressBar"
-import FerramentasSmartContentSection from "@/components/FerramentasSmartContentSection"
+import FerramentasContentSection from "@/components/FerramentasContentSection"
 
-export default function FerramentasSmart() {
+export default function Ferramentas() {
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <ProgressBar />
       <main>
         <HeroBento
-          title="Ferramentas SMART"
-          subtitle="Explore a ferramenta SMART para definição de objetivos"
+          title="Ferramentas de Planejamento"
+          subtitle="Explore as ferramentas SMART e 5W2H para planejar metas e ações"
           tag="Módulo 2"
         />
-        <FerramentasSmartContentSection />
+        <FerramentasContentSection />
       </main>
       <Footer />
     </div>
