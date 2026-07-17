@@ -6,19 +6,40 @@ import { useSidebar } from '@/contexts/SidebarContext';
 const navigation = {
   'Módulo 2': {
     path: '/',
-    components: []
+    components: [
+      { id: 'modulo-2-intro', title: 'Apresentação do Curso' },
+      { id: 'modulo-2-objetivos', title: 'Objetivos do Módulo 2' },
+      { id: 'modulo-2-roteiro', title: 'Roteiro para elaboração do PPDA e PDA' },
+      { id: 'modulo-2-passo', title: 'Passo a passo' },
+      { id: 'modulo-2-ppda', title: 'Conteúdo do PPDA' },
+      { id: 'modulo-2-modelo', title: 'Modelo de PPDA' },
+      { id: 'modulo-2-ao-final', title: 'Ao final deste módulo' },
+    ]
   },
   'Matriz de Habilidades': {
     path: '/matrizhabilidades',
-    components: []
+    components: [
+      { id: 'matriz-intro', title: 'Quadro Geral' },
+      { id: 'matriz-2', title: '4º ano' },
+      { id: 'matriz-5', title: '5º ano' },
+    ]
   },
   'Ferramentas de Planejamento': {
     path: '/ferramentas',
-    components: []
+    components: [
+      { id: 'modulo-2-smart', title: 'Metas SMART' },
+      { id: 'quiz-smart', title: 'Quiz: Aplicando as metas SMART' },
+      { id: 'ferramentas-5w2h', title: 'Ferramenta 5W2H' },
+      { id: 'ferramentas-5w2h-quiz', title: 'Relacione as perguntas do 5W2H' },
+    ]
   },
   'Encerramento': {
     path: '/encerramento',
-    components: []
+    components: [
+      { id: 'encerramento-intro', title: 'Encerrando o Módulo 2' },
+      { id: 'modulo2-quiz', title: 'Quiz do Módulo 2' },
+      { id: 'encerramento-aprendi', title: 'Neste módulo eu...' },
+    ]
   },
 };
 
