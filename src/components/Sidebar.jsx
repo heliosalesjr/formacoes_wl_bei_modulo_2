@@ -173,7 +173,7 @@ export default function Sidebar({ forceOpen, onToggle }) {
       {/* Toggle tab */}
       <button
         onClick={toggleSidebar}
-        aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+        aria-label={isOpen ? 'Fechar menu de conteúdo' : 'Abrir menu de conteúdo'}
         className={`fixed top-1/2 -translate-y-1/2 z-[60] transition-all duration-300 ease-in-out
           ${isOpen ? 'left-72' : 'left-0'}
           bg-white dark:bg-[#0f172a] hover:bg-slate-50 dark:hover:bg-[#1e293b] text-slate-600 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white

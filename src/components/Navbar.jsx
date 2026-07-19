@@ -156,7 +156,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen((v) => !v)}
               className="md:hidden flex items-center justify-center w-9 h-9 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200"
-              aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+              aria-label={isOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
               aria-expanded={isOpen}
             >
               {isOpen ? (

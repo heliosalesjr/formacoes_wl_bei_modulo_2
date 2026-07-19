@@ -85,22 +85,22 @@ describe('Navbar', () => {
 
   // ── Menu mobile ───────────────────────────────────────────────────────────
 
-  it('renderiza o botão hamburger com aria-label "Abrir menu"', () => {
+  it('renderiza o botão hamburger com aria-label "Abrir menu de navegação"', () => {
     render(<Navbar />)
-    expect(screen.getByRole('button', { name: 'Abrir menu' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Abrir menu de navegação' })).toBeInTheDocument()
   })
 
-  it('exibe aria-label "Fechar menu" após abrir o menu mobile', async () => {
+  it('exibe aria-label "Fechar menu de navegação" após abrir o menu mobile', async () => {
     const user = userEvent.setup()
     render(<Navbar />)
-    await user.click(screen.getByRole('button', { name: 'Abrir menu' }))
-    expect(screen.getByRole('button', { name: 'Fechar menu' })).toBeInTheDocument()
+    await user.click(screen.getByRole('button', { name: 'Abrir menu de navegação' }))
+    expect(screen.getByRole('button', { name: 'Fechar menu de navegação' })).toBeInTheDocument()
   })
 
   it('exibe links de navegação no dropdown mobile ao abrir', async () => {
     const user = userEvent.setup()
     render(<Navbar />)
-    await user.click(screen.getByRole('button', { name: 'Abrir menu' }))
+    await user.click(screen.getByRole('button', { name: 'Abrir menu de navegação' }))
     // O dropdown mobile renderiza os nomes completos
     const links = screen.getAllByText('Módulo 2')
     expect(links.length).toBeGreaterThanOrEqual(1)

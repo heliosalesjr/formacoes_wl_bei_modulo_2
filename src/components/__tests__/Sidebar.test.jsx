@@ -37,9 +37,9 @@ describe('Sidebar', () => {
 
   // ── Estado inicial ────────────────────────────────────────────────────────
 
-  it('renderiza o botão de toggle com aria-label "Abrir menu"', () => {
+  it('renderiza o botão de toggle com aria-label "Abrir menu de conteúdo"', () => {
     renderSidebar()
-    expect(screen.getByRole('button', { name: 'Abrir menu' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Abrir menu de conteúdo' })).toBeInTheDocument()
   })
 
   it('inicia fechada (painel fora da tela com -translate-x-full)', () => {
@@ -52,21 +52,21 @@ describe('Sidebar', () => {
   it('abre a sidebar ao clicar no toggle', async () => {
     const user = userEvent.setup()
     const { container } = renderSidebar()
-    await user.click(screen.getByRole('button', { name: 'Abrir menu' }))
+    await user.click(screen.getByRole('button', { name: 'Abrir menu de conteúdo' }))
     expect(container.querySelector('.translate-x-0')).toBeInTheDocument()
   })
 
-  it('muda aria-label do toggle para "Fechar menu" ao abrir', async () => {
+  it('muda aria-label do toggle para "Fechar menu de conteúdo" ao abrir', async () => {
     const user = userEvent.setup()
     renderSidebar()
-    await user.click(screen.getByRole('button', { name: 'Abrir menu' }))
-    expect(screen.getByRole('button', { name: 'Fechar menu' })).toBeInTheDocument()
+    await user.click(screen.getByRole('button', { name: 'Abrir menu de conteúdo' }))
+    expect(screen.getByRole('button', { name: 'Fechar menu de conteúdo' })).toBeInTheDocument()
   })
 
   it('renderiza o overlay (bg-black/40) quando aberta', async () => {
     const user = userEvent.setup()
     const { container } = renderSidebar()
-    await user.click(screen.getByRole('button', { name: 'Abrir menu' }))
+    await user.click(screen.getByRole('button', { name: 'Abrir menu de conteúdo' }))
     // Tailwind escapa a barra, então buscamos pela classe parcial
     const overlay = container.querySelector('[class*="bg-black"]')
     expect(overlay).toBeInTheDocument()
@@ -75,7 +75,7 @@ describe('Sidebar', () => {
   it('fecha ao clicar no overlay', async () => {
     const user = userEvent.setup()
     const { container } = renderSidebar()
-    await user.click(screen.getByRole('button', { name: 'Abrir menu' }))
+    await user.click(screen.getByRole('button', { name: 'Abrir menu de conteúdo' }))
     const overlay = container.querySelector('[class*="bg-black"]')
     await user.click(overlay)
     expect(container.querySelector('.-translate-x-full')).toBeInTheDocument()
@@ -86,7 +86,7 @@ describe('Sidebar', () => {
   it('renderiza os botões de seção (Módulo 2, Matriz de Habilidades, Encerramento...)', async () => {
     const user = userEvent.setup()
     renderSidebar()
-    await user.click(screen.getByRole('button', { name: 'Abrir menu' }))
+    await user.click(screen.getByRole('button', { name: 'Abrir menu de conteúdo' }))
     expect(screen.getByRole('button', { name: 'Módulo 2' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Matriz de Habilidades' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Encerramento' })).toBeInTheDocument()
@@ -95,7 +95,7 @@ describe('Sidebar', () => {
   it('aplica text-blue-600 à seção que corresponde ao pathname atual', async () => {
     const user = userEvent.setup()
     renderSidebar({}, '/matrizhabilidades')
-    await user.click(screen.getByRole('button', { name: 'Abrir menu' }))
+    await user.click(screen.getByRole('button', { name: 'Abrir menu de conteúdo' }))
     const matrizBtn = screen.getByRole('button', { name: 'Matriz de Habilidades' })
     expect(matrizBtn.className).toContain('text-blue-600')
   })
@@ -103,7 +103,7 @@ describe('Sidebar', () => {
   it('chama router.push ao clicar em seção de página diferente', async () => {
     const user = userEvent.setup()
     const { mockPush } = renderSidebar()
-    await user.click(screen.getByRole('button', { name: 'Abrir menu' }))
+    await user.click(screen.getByRole('button', { name: 'Abrir menu de conteúdo' }))
     await user.click(screen.getByRole('button', { name: 'Matriz de Habilidades' }))
     expect(mockPush).toHaveBeenCalledWith('/matrizhabilidades')
   })
@@ -119,7 +119,7 @@ describe('Sidebar', () => {
     const user = userEvent.setup()
     const mockOnToggle = jest.fn()
     renderSidebar({ onToggle: mockOnToggle })
-    await user.click(screen.getByRole('button', { name: 'Abrir menu' }))
+    await user.click(screen.getByRole('button', { name: 'Abrir menu de conteúdo' }))
     expect(mockOnToggle).toHaveBeenCalledWith(true)
   })
 
@@ -127,8 +127,8 @@ describe('Sidebar', () => {
     const user = userEvent.setup()
     const mockOnToggle = jest.fn()
     renderSidebar({ onToggle: mockOnToggle })
-    await user.click(screen.getByRole('button', { name: 'Abrir menu' }))
-    await user.click(screen.getByRole('button', { name: 'Fechar menu' }))
+    await user.click(screen.getByRole('button', { name: 'Abrir menu de conteúdo' }))
+    await user.click(screen.getByRole('button', { name: 'Fechar menu de conteúdo' }))
     expect(mockOnToggle).toHaveBeenLastCalledWith(false)
   })
 
@@ -137,7 +137,7 @@ describe('Sidebar', () => {
   it('renderiza o texto de rodapé "BEĨ Educação © 2026"', async () => {
     const user = userEvent.setup()
     renderSidebar()
-    await user.click(screen.getByRole('button', { name: 'Abrir menu' }))
+    await user.click(screen.getByRole('button', { name: 'Abrir menu de conteúdo' }))
     expect(screen.getByText(/BEĨ Educação © 2026/)).toBeInTheDocument()
   })
 })
