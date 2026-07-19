@@ -1,29 +1,10 @@
 "use client";
-import { useEffect, useRef } from 'react';
-import { useSidebar } from '@/contexts/SidebarContext';
+import { useMarkViewedOnVisible } from '@/hooks/useMarkViewedOnVisible';
 import React from 'react';
 import Image from 'next/image';
 
 const Modulo2AoFinal = () => {
-  const ref = useRef();
-  const { markAsViewed } = useSidebar();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          markAsViewed('modulo-2-ao-final');
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [markAsViewed]);
+  const ref = useMarkViewedOnVisible('modulo-2-ao-final');
 
   return (
     <div

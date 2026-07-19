@@ -1,6 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
-import { useSidebar } from "@/contexts/SidebarContext";
+import { useMarkViewedOnVisible } from "@/hooks/useMarkViewedOnVisible";
 import Image from "next/image";
 import {
   Accordion,
@@ -10,25 +9,7 @@ import {
 } from "@/components/ui/accordion";
 
 const MatrizSmart = () => {
-  const ref = useRef(null);
-  const { markAsViewed } = useSidebar();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          markAsViewed("modulo-2-smart");
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [markAsViewed]);
+  const ref = useMarkViewedOnVisible("modulo-2-smart");
 
   return (
     <div

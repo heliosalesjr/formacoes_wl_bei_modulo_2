@@ -1,31 +1,13 @@
 "use client"
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 
-import { useSidebar } from '@/contexts/SidebarContext';
+import { useMarkViewedOnVisible } from '@/hooks/useMarkViewedOnVisible';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
 const EncerramentoIntro = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const ref = useRef();
-  const { markAsViewed } = useSidebar();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          markAsViewed('encerramento-intro');
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [markAsViewed]);
+  const ref = useMarkViewedOnVisible('encerramento-intro');
 
   return (
     <div ref={ref} id="encerramento-intro" className="scroll-mt-20 mt-8 bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 rounded-lg shadow-2xl border border-slate-100 dark:border-slate-700 p-6 md:p-10 space-y-8 text-center">

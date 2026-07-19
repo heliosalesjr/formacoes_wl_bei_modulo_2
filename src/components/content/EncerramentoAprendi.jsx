@@ -1,6 +1,6 @@
 'use client'
-import React, { useState, useEffect, useRef } from 'react'
-import { useSidebar } from '@/contexts/SidebarContext';
+import React, { useState, useEffect } from 'react'
+import { useMarkViewedOnVisible } from '@/hooks/useMarkViewedOnVisible';
 
 import confetti from 'canvas-confetti'
 
@@ -31,25 +31,7 @@ const EncerramentoAprendi = () => {
     setCheckedItems(updated)
   }
 
-  const ref = useRef();
-  const { markAsViewed } = useSidebar();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          markAsViewed('encerramento-aprendi');
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [markAsViewed]);
+  const ref = useMarkViewedOnVisible('encerramento-aprendi');
 
   return (
     <div ref={ref}

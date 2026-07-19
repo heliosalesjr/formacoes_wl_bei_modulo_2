@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { useSidebar } from "@/contexts/SidebarContext";
+import { useMarkViewedOnVisible } from "@/hooks/useMarkViewedOnVisible";
 import { FaCheckCircle } from "react-icons/fa";
 import Image from 'next/image'
 import {
@@ -174,17 +173,7 @@ const titulosCapitulos_parte2 = [
 
 
 export default function Matriz5() {
-  const ref = useRef();
-  const { markAsViewed } = useSidebar();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => entry.isIntersecting && markAsViewed("matriz-5"),
-      { threshold: 0.5 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [markAsViewed]);
+  const ref = useMarkViewedOnVisible("matriz-5");
 
   return (
     <section

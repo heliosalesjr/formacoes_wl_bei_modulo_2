@@ -1,31 +1,13 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import { useSidebar } from "@/contexts/SidebarContext";
+import { useState } from "react";
+import { useMarkViewedOnVisible } from "@/hooks/useMarkViewedOnVisible";
 import Image from "next/image";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 const MatrizIntro = () => {
 
-  const ref = useRef(null);
-  const { markAsViewed } = useSidebar();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          markAsViewed("matriz-intro");
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [markAsViewed]);
+  const ref = useMarkViewedOnVisible("matriz-intro");
 
   const [mostrarImagem, setMostrarImagem] = useState(false);
 

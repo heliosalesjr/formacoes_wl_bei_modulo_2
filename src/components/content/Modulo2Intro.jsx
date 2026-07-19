@@ -1,6 +1,5 @@
 "use client";
-import { useEffect, useRef } from 'react';
-import { useSidebar } from '@/contexts/SidebarContext';
+import { useMarkViewedOnVisible } from '@/hooks/useMarkViewedOnVisible';
 import React from 'react'
 import Image from 'next/image'
 import { titleFont } from '@/lib/fonts'
@@ -13,22 +12,7 @@ import 'swiper/css/autoplay'
 const images = ['em.png', 'ef1.png', 'ef2.png']
 
 const Modulo2Intro = () => {
-  const ref = useRef();
-  const { markAsViewed } = useSidebar();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          markAsViewed("modulo-2-intro");
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [markAsViewed]);
+  const ref = useMarkViewedOnVisible("modulo-2-intro");
 
   return (
     <div className="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl mx-auto max-w-5xl">

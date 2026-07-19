@@ -1,6 +1,5 @@
 "use client";
-import { useEffect, useRef } from 'react';
-import { useSidebar } from '@/contexts/SidebarContext';
+import { useMarkViewedOnVisible } from '@/hooks/useMarkViewedOnVisible';
 
 import React from 'react'
 import { FaChalkboardTeacher, FaBookOpen, FaUsers } from 'react-icons/fa'
@@ -26,25 +25,7 @@ const objetivos = [
 
 const Modulo2Objetivos = () => {
 
-  const ref = useRef();
-  const { markAsViewed } = useSidebar();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          markAsViewed('modulo-2-objetivos');
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [markAsViewed]);
+  const ref = useMarkViewedOnVisible('modulo-2-objetivos');
 
   return (
     <div ref={ref} id="modulo-2-objetivos" className="scroll-mt-20 rounded-xl bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 p-8 shadow-2xl border border-slate-100 dark:border-slate-700">

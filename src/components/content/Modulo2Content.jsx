@@ -1,6 +1,5 @@
 'use client'
-import { useEffect, useRef } from 'react';
-import { useSidebar } from '@/contexts/SidebarContext';
+import { useMarkViewedOnVisible } from '@/hooks/useMarkViewedOnVisible';
 
 import {
   Accordion,
@@ -81,25 +80,7 @@ Dica: certifique-se de considerar as habilidades e competências, bem como os in
 
 export default function Modulo2Content() {
 
-  const ref = useRef();
-    const { markAsViewed } = useSidebar();
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            markAsViewed('modulo-2-ppda');
-          }
-        },
-        { threshold: 0.5 }
-      );
-  
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-  
-      return () => observer.disconnect();
-    }, [markAsViewed]);
+  const ref = useMarkViewedOnVisible('modulo-2-ppda');
 
   return (
     <section ref={ref} id="modulo-2-ppda" className="scroll-mt-20 max-w-5xl mx-auto my-16 py-4 px-4 sm:px-6 lg:px-8">

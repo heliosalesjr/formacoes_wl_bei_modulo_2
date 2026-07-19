@@ -1,6 +1,6 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
-import { useSidebar } from '@/contexts/SidebarContext';
+import { useState } from "react";
+import { useMarkViewedOnVisible } from '@/hooks/useMarkViewedOnVisible';
 import confetti from "canvas-confetti";
 
 const perguntas = [
@@ -44,25 +44,7 @@ export default function WhGame() {
     setMostrarResultado(false);
   };
   
-  const ref = useRef();
-    const { markAsViewed } = useSidebar();
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            markAsViewed('ferramentas-5w2h-quiz');
-          }
-        },
-        { threshold: 0.5 }
-      );
-  
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-  
-      return () => observer.disconnect();
-    }, [markAsViewed]);
+  const ref = useMarkViewedOnVisible('ferramentas-5w2h-quiz');
 
   return (
     

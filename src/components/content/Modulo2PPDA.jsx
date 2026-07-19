@@ -1,6 +1,5 @@
 "use client"
-import { useEffect, useRef } from 'react';
-import { useSidebar } from '@/contexts/SidebarContext';
+import { useMarkViewedOnVisible } from '@/hooks/useMarkViewedOnVisible';
 
 import { motion } from "framer-motion"
 import { FaMagic } from "react-icons/fa"
@@ -8,25 +7,7 @@ import { Button } from "@/components/ui/button"
 
 export default function Modulo2PPDA() {
 
-  const ref = useRef();
-    const { markAsViewed } = useSidebar();
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            markAsViewed('modulo-2-modelo');
-          }
-        },
-        { threshold: 0.5 }
-      );
-  
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-  
-      return () => observer.disconnect();
-    }, [markAsViewed]);
+  const ref = useMarkViewedOnVisible('modulo-2-modelo');
 
   return (
     <motion.div

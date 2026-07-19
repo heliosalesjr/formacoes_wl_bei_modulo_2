@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { useMarkViewedOnVisible } from "@/hooks/useMarkViewedOnVisible";
 import confetti from "canvas-confetti";
 import {
   AlertDialog,
@@ -9,7 +10,6 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
-import { useSidebar } from "@/contexts/SidebarContext";
 
 const perguntas = [
   {
@@ -202,8 +202,7 @@ const perguntas = [
 ];
 
 export default function EncerramentoQuizModulo2() {
-  const ref = useRef(null);
-  const { markAsViewed } = useSidebar();
+  const ref = useMarkViewedOnVisible("modulo2-quiz");
   const [respostas, setRespostas] = useState({});
   const [feedback, setFeedback] = useState({
     open: false,
@@ -211,17 +210,6 @@ export default function EncerramentoQuizModulo2() {
     mensagem: "",
     correta: false,
   });
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) markAsViewed("modulo2-quiz");
-      },
-      { threshold: 0.5 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [markAsViewed]);
 
   const handleResposta = (perguntaIndex, opcaoIndex) => {
     const pergunta = perguntas[perguntaIndex];
