@@ -22,6 +22,7 @@ const navigation = {
       { id: 'matriz-intro', title: 'Quadro Geral' },
       { id: 'matriz-2', title: '4º ano' },
       { id: 'matriz-5', title: '5º ano' },
+      { id: 'matriz-6', title: '6º ano' },
     ]
   },
   'Ferramentas de Planejamento': {

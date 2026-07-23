@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import FadeInWhenVisible from "@/components/FadeInWhenVisible"
 import MatrizIntro from "@/components/content/MatrizIntro"
-import Matriz2 from "@/components/content/Matriz2"
-import Matriz5 from "@/components/content/Matriz5"
+import MatrizAnos from "@/components/content/MatrizAnos"
 
 export default function MatrizHabilidadesContentSection() {
   return (
@@ -16,11 +15,7 @@ export default function MatrizHabilidadesContentSection() {
           </FadeInWhenVisible>
 
           <FadeInWhenVisible>
-            <Matriz2 />
-          </FadeInWhenVisible>
-
-          <FadeInWhenVisible>
-            <Matriz5 />
+            <MatrizAnos />
           </FadeInWhenVisible>
 
           <div className="flex justify-center mt-8">

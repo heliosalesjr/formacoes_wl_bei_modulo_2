@@ -1,8 +1,4 @@
-"use client";
-
-import { useMarkViewedOnVisible } from "@/hooks/useMarkViewedOnVisible";
 import { FaCheckCircle } from "react-icons/fa";
-import Image from 'next/image'
 import {
   Tooltip,
   TooltipContent,
@@ -64,34 +60,6 @@ const objetivosBNCC = [
   },
 ];
 
-const habilidadesTN = [
-  {
-    label: "Reconhecer troco e desconto em situações de uso do dinheiro, identificando o significado de cada um deles",
-    code: "EF35LF05",
-    caps: [1, 2, 3, 4],
-  },
-  {
-    label: "Calcular troco e desconto em situações de uso do dinheiro",
-    code: "EF35LF06",
-    caps: [1, 2, 3, 4],
-  },
-  {
-    label: "Identificar, com base na forma e conteúdo, a função de gêneros textuais relacionados à vida financeira como recibos, extratos, cupons fiscais, faturas, boletos, notas promissórias, entre outros",
-    code: "EF35LF07",
-    caps: [1],
-  },
-  {
-    label: "Diferenciar lucro de prejuízo com base na análise de situações de uso do dinheiro",
-    code: "EF45LF02",
-    caps: [3, 4],
-  },
-  {
-    label: "Localizar diferentes informações em textos da vida financeira, interpretando suas funções (partes que formam os documentos)",
-    code: "EF35LF08",
-    caps: [4],
-  },
-];
-
 const titulosCapitulos = [
   "Capítulo 1: A festa dos meus sonhos",
   "Capítulo 2: Planejando o cardápio da festa!",
@@ -137,34 +105,6 @@ const objetivosBNCC_parte2 = [
   },
 ];
 
-const habilidadesTN_parte2 = [
-  {
-    label: "Reconhecer troco e desconto em situações de uso do dinheiro, identificando o significado de cada um deles",
-    code: "EF35LF05",
-    caps: [5, 6, 7],
-  },
-  {
-    label: "Calcular troco e desconto em situações de uso do dinheiro",
-    code: "EF35LF06",
-    caps: [5, 6, 7],
-  },
-  {
-    label: "Diferenciar lucro de prejuízo com base na análise de situações de uso do dinheiro",
-    code: "EF45LF02",
-    caps: [5, 6, 7],
-  },
-  {
-    label: "Identificar, com base na forma e conteúdo, a função de gêneros textuais relacionados à vida financeira como recibos, extratos, cupons fiscais, faturas, boletos, notas promissórias, entre outros",
-    code: "EF35LF07",
-    caps: [5],
-  },
-  {
-    label: "Localizar diferentes informações em textos da vida financeira, interpretando suas funções (partes que formam os documentos)",
-    code: "EF35LF08",
-    caps: [7],
-  },
-];
-
 const titulosCapitulos_parte2 = [
   "Capítulo 5: Como é ser dona de uma loja de brinquedos",
   "Capítulo 6: Aprendendo a fazer uma propaganda",
@@ -173,33 +113,19 @@ const titulosCapitulos_parte2 = [
 
 
 export default function Matriz5() {
-  const ref = useMarkViewedOnVisible("matriz-5");
-
   return (
-    <section
-      ref={ref}
-      id="matriz-5"
-      className="scroll-mt-20 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-xl p-8 space-y-10"
-    >
-      <div className="text-center space-y-2">
-        <h1 className="text-4xl font-bold text-slate-600 dark:text-white">Matriz de Habilidades</h1>
-        <div className="flex justify-center">
-                    <div className="relative w-96 h-80 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
-                          <Image
-                            src="/livros5o.png"
-                            alt="Livros do 5º ano"
-                            fill
-                            className="object-contain"
-                          />
-                    </div>
-        </div>
-        <p className="text-slate-600 dark:text-slate-300 text-xl font-bold pt-4">5º ano — Parte 1</p>
+    <div className="space-y-10">
+      <div className="flex items-center justify-center gap-3">
+        <span className="h-px w-8 bg-cyan-300 dark:bg-cyan-800" />
+        <p className="text-sm font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-400">
+          Parte 1
+        </p>
+        <span className="h-px w-8 bg-cyan-300 dark:bg-cyan-800" />
       </div>
 
       <TooltipProvider>
         {/* 📊 TABELA BNCC */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-cyan-700 dark:text-cyan-400 text-center">BNCC</h2>
           <div className="overflow-auto rounded-xl border dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
             <table className="w-full text-left text-sm md:text-base">
               <thead className="bg-purple-100 dark:bg-purple-950 text-cyan-700 dark:text-cyan-300 font-semibold">
@@ -246,75 +172,20 @@ export default function Matriz5() {
           </div>
         </div>
 
-        {/* 📊 TABELA TESOURO NACIONAL */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-cyan-700 dark:text-cyan-400 text-center">Habilidades Tesouro Nacional</h2>
-          <div className="overflow-auto rounded-xl border dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
-            <table className="w-full text-left text-sm md:text-base">
-              <thead className="bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300 font-semibold">
-                <tr>
-                  <th className="p-3">Objetivo de Conhecimento</th>
-                  {[1, 2, 3, 4].map((n) => (
-                    <th key={n} className="p-3 text-center">
-                      <Tooltip>
-                        <TooltipTrigger asChild>
-                          <span className="cursor-help">Cap. {n}</span>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>{titulosCapitulos[n-1]}</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-
-              <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
-                {habilidadesTN.map((obj, i) => (
-                  <tr key={i} className="hover:bg-cyan-50/40 dark:hover:bg-cyan-950/40 transition">
-                    <td className="p-3">
-                      <span className="font-medium text-slate-800 dark:text-slate-100">{obj.label}</span>
-                      {obj.code && (
-                        <span className="text-cyan-600 dark:text-cyan-400 font-semibold ml-2">
-                          ({obj.code})
-                        </span>
-                      )}
-                    </td>
-
-                    {[1, 2, 3, 4].map((cap) => (
-                      <td key={cap} className="p-3 text-center">
-                        {obj.caps.includes(cap) && (
-                          <FaCheckCircle className="text-green-500 mx-auto" />
-                        )}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
       </TooltipProvider>
 
       {/* DIVISOR PARTES 2 E 3 */}
-      <div className="text-center space-y-2 pt-8  border-slate-300 dark:border-slate-700">
-        <div className="flex justify-center">
-                    <div className="relative w-96 h-80 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
-                          <Image
-                            src="/livros5o.png"
-                            alt="Livros do 5º ano"
-                            fill
-                            className="object-contain"
-                          />
-                    </div>
-        </div>
-        <p className="text-slate-600 dark:text-slate-300 text-xl font-bold pt-4">5º ano — Partes 2 e 3</p>
+      <div className="flex items-center justify-center gap-3 pt-4 border-t border-dashed border-slate-200 dark:border-slate-700">
+        <span className="h-px w-8 bg-cyan-300 dark:bg-cyan-800" />
+        <p className="text-sm font-semibold uppercase tracking-widest text-cyan-600 dark:text-cyan-400">
+          Partes 2 e 3
+        </p>
+        <span className="h-px w-8 bg-cyan-300 dark:bg-cyan-800" />
       </div>
 
       <TooltipProvider>
         {/* 📊 TABELA BNCC - PARTE 2 */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-cyan-700 dark:text-cyan-400 text-center">BNCC</h2>
           <div className="overflow-auto rounded-xl border dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
             <table className="w-full text-left text-sm md:text-base">
               <thead className="bg-purple-100 dark:bg-purple-950 text-cyan-700 dark:text-cyan-300 font-semibold">
@@ -361,56 +232,8 @@ export default function Matriz5() {
           </div>
         </div>
 
-        {/* 📊 TABELA TESOURO NACIONAL - PARTE 2 */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-cyan-700 dark:text-cyan-400 text-center">Habilidades Tesouro Nacional</h2>
-          <div className="overflow-auto rounded-xl border dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
-            <table className="w-full text-left text-sm md:text-base">
-              <thead className="bg-cyan-100 dark:bg-cyan-950 text-cyan-700 dark:text-cyan-300 font-semibold">
-                <tr>
-                  <th className="p-3">Objetivo de Conhecimento</th>
-                  {[5, 6, 7].map((n) => (
-                    <th key={n} className={`p-3 text-center ${n === 7 ? 'bg-orange-100 dark:bg-orange-950 text-cyan-700 dark:text-cyan-300' : ''}`}>
-                      <Tooltip>
-                        <TooltipTrigger asChild>
-                          <span className="cursor-help">Cap. {n}</span>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>{titulosCapitulos_parte2[n-5]}</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-
-              <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
-                {habilidadesTN_parte2.map((obj, i) => (
-                  <tr key={i} className="hover:bg-cyan-50/40 dark:hover:bg-cyan-950/40 transition">
-                    <td className="p-3">
-                      <span className="font-medium text-slate-800 dark:text-slate-100">{obj.label}</span>
-                      {obj.code && (
-                        <span className="text-cyan-600 dark:text-cyan-400 font-semibold ml-2">
-                          ({obj.code})
-                        </span>
-                      )}
-                    </td>
-
-                    {[5, 6, 7].map((cap) => (
-                      <td key={cap} className={`p-3 text-center ${cap === 7 ? 'bg-orange-50 dark:bg-orange-950/40' : ''}`}>
-                        {obj.caps.includes(cap) && (
-                          <FaCheckCircle className="text-green-500 mx-auto" />
-                        )}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
       </TooltipProvider>
 
-    </section>
+    </div>
   );
 }

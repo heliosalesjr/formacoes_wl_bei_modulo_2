@@ -1,7 +1,3 @@
-"use client";
-
-import { useMarkViewedOnVisible } from "@/hooks/useMarkViewedOnVisible";
-import Image from 'next/image'
 import { FaCheckCircle } from "react-icons/fa";
 import {
   Tooltip,
@@ -92,44 +88,6 @@ const objetivosBNCC = [
   },
 ];
 
-const habilidadesTN = [
-  {
-    label: "Reconhecer que o dinheiro é limitado e pode ser adquirido de diferentes fontes",
-    code: "EF35LF26",
-    caps: [1, 2, 3],
-  },
-  {
-    label: "Definir trabalho, relacionando-o ao conceito de profissões e remuneração",
-    code: "EF35LF27",
-    caps: [1, 2, 3],
-  },
-  {
-    label: "Relacionar diferentes profissões às suas características, identificando exemplos na comunidade",
-    code: "EF35LF28",
-    caps: [1, 2, 3, 4],
-  },
-  {
-    label: "Identificar a presença de atividades empreendedoras na comunidade em que vive",
-    code: "EF45LF19",
-    caps: [1, 2, 3],
-  },
-  {
-    label: "Reconhecer troco e desconto em situações de uso do dinheiro, identificando o significado de cada um deles",
-    code: "EF35LF05",
-    caps: [1, 2, 3, 4],
-  },
-  {
-    label: "Calcular troco e desconto em situações de uso do dinheiro",
-    code: "EF35LF06",
-    caps: [2, 4],
-  },
-  {
-    label: "Localizar diferentes informações em textos da vida financeira, interpretando suas funções",
-    code: "EF35LF08",
-    caps: [2],
-  },
-];
-
 const titulosCapitulos = [
   "Capítulo 1: De onde vem o dinheiro?",
   "Capítulo 2: Bateu uma fome! Onde vamos comer?",
@@ -200,39 +158,6 @@ const objetivosBNCC_parte2 = [
   },
 ];
 
-const habilidadesTN_parte2 = [
-  {
-    label: "Identificar a presença de atividades empreendedoras na comunidade em que vive",
-    code: "EF45LF19",
-    caps: [5],
-  },
-  {
-    label: "Reconhecer troco e desconto em situações de uso do dinheiro, identificando o significado de cada um deles",
-    code: "EF35LF05",
-    caps: [5, 6],
-  },
-  {
-    label: "Reconhecer diferentes meios de pagamento (dinheiro, carnês de loja, cheque, cartões, pix, moedas digitais, etc) em situações-problema, atividades lúdicas, entre outros",
-    code: "EF35LF01",
-    caps: [5, 6],
-  },
-  {
-    label: "Reconhecer troco e desconto em situações de uso do dinheiro, identificando o significado de cada um deles",
-    code: "EF35LF07",
-    caps: [6],
-  },
-  {
-    label: "Localizar diferentes informações em textos da vida financeira, interpretando suas funções (partes que formam os documentos)",
-    code: "EF35LF08",
-    caps: [6],
-  },
-  {
-    label: "Revisão do livro",
-    code: "",
-    caps: [7],
-  },
-];
-
 const titulosCapitulos_parte2 = [
   "Capítulo 5: De olho nas promoções",
   "Capítulo 6: Minha responsabilidade como consumidor e cidadão",
@@ -241,34 +166,19 @@ const titulosCapitulos_parte2 = [
 
 
 export default function Matriz2() {
-  const ref = useMarkViewedOnVisible("matriz-2");
-
   return (
-    <section
-      ref={ref}
-      id="matriz-2"
-      className="scroll-mt-20 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-xl p-8 space-y-10"
-    >
-      <div className="text-center space-y-2">
-        <h1 className="text-4xl font-bold text-slate-600 dark:text-white">Matriz de Habilidades</h1>
-        <div className="flex justify-center">
-                            <div className="relative w-96 h-80 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
-                                  <Image
-                                    src="/livros4o.png"
-                                    alt="Livros do 4º ano"
-                                    fill
-                                    className="object-contain"
-                                  />
-                            </div>
-                </div>
-
-        <p className="text-slate-600 dark:text-slate-300 text-xl font-bold pt-4">4º ano — Parte 1</p>
+    <div className="space-y-10">
+      <div className="flex items-center justify-center gap-3">
+        <span className="h-px w-8 bg-red-300 dark:bg-red-800" />
+        <p className="text-sm font-semibold uppercase tracking-widest text-red-600 dark:text-red-400">
+          Parte 1
+        </p>
+        <span className="h-px w-8 bg-red-300 dark:bg-red-800" />
       </div>
 
       <TooltipProvider>
         {/* 📊 TABELA BNCC */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-red-700 dark:text-red-400 text-center">BNCC</h2>
           <div className="overflow-auto rounded-xl border dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
             <table className="w-full text-left text-sm md:text-base">
               <thead className="bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300 font-semibold">
@@ -315,75 +225,20 @@ export default function Matriz2() {
           </div>
         </div>
 
-        {/* 📊 TABELA TESOURO NACIONAL */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-orange-700 dark:text-orange-400 text-center">Habilidades Tesouro Nacional</h2>
-          <div className="overflow-auto rounded-xl border dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
-            <table className="w-full text-left text-sm md:text-base">
-              <thead className="bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300 font-semibold">
-                <tr>
-                  <th className="p-3">Objetivo de Conhecimento</th>
-                  {[1, 2, 3, 4].map((n) => (
-                    <th key={n} className="p-3 text-center">
-                      <Tooltip>
-                        <TooltipTrigger asChild>
-                          <span className="cursor-help">Cap. {n}</span>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>{titulosCapitulos[n-1]}</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-
-              <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
-                {habilidadesTN.map((obj, i) => (
-                  <tr key={i} className="hover:bg-orange-50/40 dark:hover:bg-orange-950/40 transition">
-                    <td className="p-3">
-                      <span className="font-medium text-slate-800 dark:text-slate-100">{obj.label}</span>
-                      {obj.code && (
-                        <span className="text-orange-600 dark:text-orange-400 font-semibold ml-2">
-                          ({obj.code})
-                        </span>
-                      )}
-                    </td>
-
-                    {[1, 2, 3, 4].map((cap) => (
-                      <td key={cap} className="p-3 text-center">
-                        {obj.caps.includes(cap) && (
-                          <FaCheckCircle className="text-green-500 mx-auto" />
-                        )}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
       </TooltipProvider>
 
       {/* DIVISOR PARTE 2 */}
-      <div className="text-center space-y-2 pt-8 border-slate-300 dark:border-slate-700">
-        <div className="flex justify-center">
-                            <div className="relative w-96 h-80 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
-                                  <Image
-                                    src="/livros4o.png"
-                                    alt="Livros do 4º ano"
-                                    fill
-                                    className="object-contain"
-                                  />
-                            </div>
-                </div>
-        <p className="text-slate-600 dark:text-slate-300 text-xl font-bold pt-4">4º ano — Parte 2</p>
+      <div className="flex items-center justify-center gap-3 pt-4 border-t border-dashed border-slate-200 dark:border-slate-700">
+        <span className="h-px w-8 bg-red-300 dark:bg-red-800" />
+        <p className="text-sm font-semibold uppercase tracking-widest text-red-600 dark:text-red-400">
+          Parte 2
+        </p>
+        <span className="h-px w-8 bg-red-300 dark:bg-red-800" />
       </div>
 
       <TooltipProvider>
         {/* 📊 TABELA BNCC - PARTE 2 */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-red-700 dark:text-red-400 text-center">BNCC</h2>
           <div className="overflow-auto rounded-xl border dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
             <table className="w-full text-left text-sm md:text-base">
               <thead className="bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300 font-semibold">
@@ -430,56 +285,8 @@ export default function Matriz2() {
           </div>
         </div>
 
-        {/* 📊 TABELA TESOURO NACIONAL - PARTE 2 */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-orange-700 dark:text-orange-400 text-center">Habilidades Tesouro Nacional</h2>
-          <div className="overflow-auto rounded-xl border dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
-            <table className="w-full text-left text-sm md:text-base">
-              <thead className="bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300 font-semibold">
-                <tr>
-                  <th className="p-3">Objetivo de Conhecimento</th>
-                  {[5, 6, 7].map((n) => (
-                    <th key={n} className="p-3 text-center">
-                      <Tooltip>
-                        <TooltipTrigger asChild>
-                          <span className="cursor-help">Cap. {n}</span>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>{titulosCapitulos_parte2[n-5]}</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-
-              <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
-                {habilidadesTN_parte2.map((obj, i) => (
-                  <tr key={i} className="hover:bg-orange-50/40 dark:hover:bg-orange-950/40 transition">
-                    <td className="p-3">
-                      <span className="font-medium text-slate-800 dark:text-slate-100">{obj.label}</span>
-                      {obj.code && (
-                        <span className="text-orange-600 dark:text-orange-400 font-semibold ml-2">
-                          ({obj.code})
-                        </span>
-                      )}
-                    </td>
-
-                    {[5, 6, 7].map((cap) => (
-                      <td key={cap} className="p-3 text-center">
-                        {obj.caps.includes(cap) && (
-                          <FaCheckCircle className="text-green-500 mx-auto" />
-                        )}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
       </TooltipProvider>
 
-    </section>
+    </div>
   );
 }
