@@ -20,10 +20,10 @@ const Modulo2Passo = () => {
 
       <div className="text-slate-700 dark:text-slate-200 space-y-5 text-lg leading-relaxed">
         <p>
-          Existem várias formas de trabalhar por projetos. Sugerimos aqui o <strong>Pequeno Projeto Didático Ativo (PPDA)</strong>, projeto de curta duração (mensal, bimestral ou trimestral) como fator de mobilização para engajar os estudantes.
+          Existem várias formas de trabalhar por projetos. Sugerimos aqui o <strong>Pequeno Projeto Didático Ativo </strong>, projeto de curta duração (mensal, bimestral ou trimestral) como fator de mobilização para engajar os estudantes.
         </p>
         <p>
-          Ao fim de cada projeto, os estudantes devem apresentar os resultados para a comunidade escolar. A cada capítulo do Livro do Estudante há uma atividade prática que pode ser trabalhada com a metodologia de PPDA.
+          Ao fim de cada projeto, os estudantes devem apresentar os resultados para a comunidade escolar. A cada capítulo do Livro do Estudante há uma atividade prática que pode ser trabalhada com a metodologia de projeto.
         </p>
         <p>
           Cada uma corresponde a um <strong>Fator de Mobilização</strong>, constituindo uma forma interessante e divertida de aplicar os conteúdos aprendidos. Lembre-se de adaptar o projeto ao perfil da turma, às condições do local, da escola e da comunidade etc.

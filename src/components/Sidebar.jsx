@@ -9,10 +9,10 @@ const navigation = {
     components: [
       { id: 'modulo-2-intro', title: 'Apresentação do Curso' },
       { id: 'modulo-2-objetivos', title: 'Objetivos do Módulo 2' },
-      { id: 'modulo-2-roteiro', title: 'Roteiro para elaboração do PPDA e PDA' },
+      { id: 'modulo-2-roteiro', title: 'Roteiro para elaboração do projeto' },
       { id: 'modulo-2-passo', title: 'Passo a passo' },
-      { id: 'modulo-2-ppda', title: 'Conteúdo do PPDA' },
-      { id: 'modulo-2-modelo', title: 'Modelo de PPDA' },
+      { id: 'modulo-2-ppda', title: 'Conteúdo do projeto' },
+      { id: 'modulo-2-modelo', title: 'Modelo de projeto' },
       { id: 'modulo-2-ao-final', title: 'Ao final deste módulo' },
     ]
   },

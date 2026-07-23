@@ -60,17 +60,17 @@ iii. de conduta – ações manifestas e declaração de intenções.
   },
   {
     title: "Passo 7: Atividades",
-    content: `Escolher as atividades a serem desenvolvidas em cada aula para trabalhar os conteúdos previstos e alcançar os objetivos desejados. Descrever as estratégias para as aulas. Que habilidades (definidas como importantes por meio do perfil da turma) o educador vai trabalhar, qual conteúdo utilizará e como se dará o desenvolvimento das habilidades listadas. O arranjo deve concatenar as habilidades com os conteúdos e atividades que o educador propôs aos jovens desenvolver. Montar um plano de atividades, detalhando a primeira parte: como apresentar o seu PPDA para a turma; como eles podem desenvolver o fator de mobilização que o educador solicitou; como podem se organizar. As partes posteriores serão detalhadas à medida que forem definidas, a depender das decisões tomadas junto com os jovens.
+    content: `Escolher as atividades a serem desenvolvidas em cada aula para trabalhar os conteúdos previstos e alcançar os objetivos desejados. Descrever as estratégias para as aulas. Que habilidades (definidas como importantes por meio do perfil da turma) o educador vai trabalhar, qual conteúdo utilizará e como se dará o desenvolvimento das habilidades listadas. O arranjo deve concatenar as habilidades com os conteúdos e atividades que o educador propôs aos jovens desenvolver. Montar um plano de atividades, detalhando a primeira parte: como apresentar o seu projeto para a turma; como eles podem desenvolver o fator de mobilização que o educador solicitou; como podem se organizar. As partes posteriores serão detalhadas à medida que forem definidas, a depender das decisões tomadas junto com os jovens.
 
 Dica: certifique-se de considerar as habilidades e competências, bem como os interesses, conhecimentos e práticas dos estudantes quanto aos assuntos abordados, para saber como ampliar o conhecimento dos conteúdos desenvolvidos. Isso ajuda a propor atividades estimulantes e motivadoras. Em geral, uma atividade é estimulante e motivadora quando propõe desafios passíveis de serem superados. As atividades devem ser planejadas de maneira que uma ocorra após a outra, dando sentido à sequência estabelecida a fim de atingir cada objetivo estabelecido.`,
   },
   {
     title: "Passo 8: Avaliação de percurso e de resultados",
-    content: `É importante que, para cada atividade ou bloco de atividades, o educador programe e dedique um tempo específico para conferir se está atingindo os objetivos do PPDA. Um bom plano de avaliação contém indicadores ou evidências de aprendizagem de acordo com cada objetivo elencado (o que se pretende que os estudantes demonstrem ou façam para comprovar seu progresso no alcance das metas estabelecidas?), formas de verificação (podem ser usadas vários instrumentos, como apresentações, seminários, peças de teatro, pesquisas, debate, prova escrita, autoavaliação etc.) e um momento de verificação, ou seja, de observação durante a atividade ou ao fim de um conjunto de atividades.`,
+    content: `É importante que, para cada atividade ou bloco de atividades, o educador programe e dedique um tempo específico para conferir se está atingindo os objetivos do projeto. Um bom plano de avaliação contém indicadores ou evidências de aprendizagem de acordo com cada objetivo elencado (o que se pretende que os estudantes demonstrem ou façam para comprovar seu progresso no alcance das metas estabelecidas?), formas de verificação (podem ser usadas vários instrumentos, como apresentações, seminários, peças de teatro, pesquisas, debate, prova escrita, autoavaliação etc.) e um momento de verificação, ou seja, de observação durante a atividade ou ao fim de um conjunto de atividades.`,
   },
   {
     title: "Passo 9: Apresentação aos estudantes e finalização",
-    content: `Com o PPDA estruturado, o educador deve apresentá-lo à turma. Nesse momento, ele pode ser ajustado e finalizado com a ajuda dos jovens, para que o educador, em seguida, dê início às atividades, conforme planejado.`,
+    content: `Com o projeto estruturado, o educador deve apresentá-lo à turma. Nesse momento, ele pode ser ajustado e finalizado com a ajuda dos jovens, para que o educador, em seguida, dê início às atividades, conforme planejado.`,
   },
   {
     title: "Passo 10: Culminância para celebração e apresentação dos resultados",
@@ -93,7 +93,7 @@ export default function Modulo2Content() {
         <Card className="w-full bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-blue-100 dark:border-slate-700">
           <CardHeader>
             <CardTitle className="text-2xl sm:text-3xl font-bold text-slate-700 dark:text-white text-center">
-              Como elaborar um roteiro do PPDA
+              Como elaborar um roteiro de projeto
             </CardTitle>
           </CardHeader>
           <CardContent className="py-6">

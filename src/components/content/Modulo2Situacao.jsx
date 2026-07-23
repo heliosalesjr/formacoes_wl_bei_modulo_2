@@ -50,7 +50,7 @@ const Modulo2Situacao = () => {
             >
               <div className="max-w-3xl">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                Roteiro para elaboração do PPDA e PDA
+                Roteiro para elaboração do projeto
                 </h2>
                 
               </div>

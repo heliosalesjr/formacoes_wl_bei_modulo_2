@@ -22,9 +22,9 @@ export default function Modulo2PPDA() {
       <div className="flex justify-center text-blue-600 dark:text-blue-400">
         <FaMagic size={40} />
       </div>
-      <h2 className="text-2xl font-bold text-slate-800 dark:text-white">Modelo de PPDA</h2>
+      <h2 className="text-2xl font-bold text-slate-800 dark:text-white">Modelo de projeto</h2>
       <p className="text-slate-600 dark:text-slate-300 max-w-xl mx-auto">
-        Baixe este arquivo e faça uma cópia dele para usar como modelo do seu PPDA.
+        Baixe este arquivo e faça uma cópia dele para usar como modelo do seu projeto.
       </p>
       <div>
         <a
