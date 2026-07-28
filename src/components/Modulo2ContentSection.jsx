@@ -15,9 +15,9 @@ export default function Modulo2ContentSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-5xl space-y-8">
 
-          <FadeInWhenVisible>
+          
             <Modulo2Intro />
-          </FadeInWhenVisible>
+         
 
           <FadeInWhenVisible>
             <Modulo2Objetivos />
