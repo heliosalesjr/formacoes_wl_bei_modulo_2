@@ -16,7 +16,7 @@ const Modulo2AoFinal = () => {
         {/* Imagem - 1/3 da largura e altura total */}
         <div className="relative w-full h-full min-h-[300px] overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
           <Image
-            src="/check.jpg"
+            src="/check2.png"
             alt="Imagem ilustrativa"
             fill
             className="object-cover transition-transform duration-300 hover:scale-105"
