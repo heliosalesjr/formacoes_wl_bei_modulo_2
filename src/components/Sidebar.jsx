@@ -16,6 +16,12 @@ const navigation = {
       { id: 'modulo-2-ao-final', title: 'Ao final deste módulo' },
     ]
   },
+  'Projetos': {
+    path: '/projetos',
+    components: [
+      { id: 'projetos-intro', title: 'Como planejar projetos' },
+    ]
+  },
   'Matriz de Habilidades': {
     path: '/matrizhabilidades',
     components: [

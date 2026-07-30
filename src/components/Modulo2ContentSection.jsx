@@ -3,10 +3,6 @@ import Link from "next/link"
 import FadeInWhenVisible from "@/components/FadeInWhenVisible"
 import Modulo2Intro from "@/components/content/Modulo2Intro"
 import Modulo2Objetivos from "@/components/content/Modulo2Objetivos"
-import Modulo2Situacao from "@/components/content/Modulo2Situacao"
-import Modulo2Passo from "@/components/content/Modulo2Passo"
-import Modulo2Content from "@/components/content/Modulo2Content"
-import Modulo2PPDA from "@/components/content/Modulo2PPDA"
 import Modulo2AoFinal from "@/components/content/Modulo2AoFinal"
 
 export default function Modulo2ContentSection() {
@@ -23,21 +19,7 @@ export default function Modulo2ContentSection() {
             <Modulo2Objetivos />
           </FadeInWhenVisible>
 
-          <FadeInWhenVisible>
-            <Modulo2Situacao />
-          </FadeInWhenVisible>
-
-          <FadeInWhenVisible>
-            <Modulo2Passo />
-          </FadeInWhenVisible>
-
-          <FadeInWhenVisible>
-            <Modulo2Content />
-          </FadeInWhenVisible>
-
-          <FadeInWhenVisible>
-            <Modulo2PPDA />
-          </FadeInWhenVisible>
+          
 
           <FadeInWhenVisible>
             <Modulo2AoFinal />
@@ -46,7 +28,7 @@ export default function Modulo2ContentSection() {
 
           <div className="flex justify-center mt-8">
             <Button asChild size="lg">
-              <Link href="/matrizhabilidades">Próxima Página: Matriz de Habilidades</Link>
+              <Link href="/projetos">Próxima Página: Projetos</Link>
             </Button>
           </div>
 
