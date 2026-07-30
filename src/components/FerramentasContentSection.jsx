@@ -5,6 +5,7 @@ import MatrizSmart from "@/components/content/MatrizSmart"
 import SmartQuiz from "@/components/content/SmartQuiz"
 import WhIntro from "@/components/content/WhIntro"
 import WhGame from "@/components/content/WhGame"
+import PlanilhasModelos from "@/components/content/PlanilhasModelos"
 
 export default function FerramentasContentSection() {
   return (
@@ -26,6 +27,10 @@ export default function FerramentasContentSection() {
 
           <FadeInWhenVisible>
             <WhGame />
+          </FadeInWhenVisible>
+
+          <FadeInWhenVisible>
+            <PlanilhasModelos />
           </FadeInWhenVisible>
 
           <div className="flex justify-center mt-8">

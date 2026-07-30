@@ -38,6 +38,7 @@ const navigation = {
       { id: 'quiz-smart', title: 'Quiz: Aplicando as metas SMART' },
       { id: 'ferramentas-5w2h', title: 'Ferramenta 5W2H' },
       { id: 'ferramentas-5w2h-quiz', title: 'Relacione as perguntas do 5W2H' },
+      { id: 'ferramentas-planilhas', title: 'Planilhas para usar em sala' },
     ]
   },
   'Encerramento': {
