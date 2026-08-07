@@ -108,7 +108,7 @@ export default function Modulo2Content() {
             <CardTitle className="text-2xl sm:text-3xl font-bold text-slate-700 dark:text-white text-center">
               Como elaborar um roteiro de projeto
             </CardTitle>
-            <p className='font-thin  text-slate-50 text-center max-w-2xl mx-auto tracking-wide pt-4'>Segue um passo a passo que pode ajudar na elaboração de projetos. Esses passos são adaptáveis e, à medida que você realizar os projetos, vai se acostumar e entender quais passos precisam de mais ou menos atenção.</p>
+            <p className='font-thin text-base sm:text-lg text-slate-600 dark:text-slate-300 text-center max-w-2xl mx-auto tracking-wide pt-4'>Segue um passo a passo que pode ajudar na elaboração de projetos. Esses passos são adaptáveis e, à medida que você realizar os projetos, vai se acostumar e entender quais passos precisam de mais ou menos atenção.</p>
           </CardHeader>
           <CardContent className="py-6">
             <div className="space-y-4 text-base">

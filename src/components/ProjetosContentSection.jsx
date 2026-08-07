@@ -5,6 +5,7 @@ import Modulo2Situacao from "@/components/content/Modulo2Situacao"
 import Modulo2Passo from "@/components/content/Modulo2Passo"
 import Modulo2Content from "@/components/content/Modulo2Content"
 import Modulo2PPDA from "@/components/content/Modulo2PPDA"
+import ProjetoAnos from "@/components/content/ProjetoAnos"
 
 export default function ProjetosContentSection() {
   return (
@@ -26,6 +27,10 @@ export default function ProjetosContentSection() {
           
                     <FadeInWhenVisible>
                       <Modulo2PPDA />
+                    </FadeInWhenVisible>
+
+                    <FadeInWhenVisible>
+                      <ProjetoAnos />
                     </FadeInWhenVisible>
 
           <div className="flex justify-center mt-8">
