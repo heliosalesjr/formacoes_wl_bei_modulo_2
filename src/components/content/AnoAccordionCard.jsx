@@ -28,6 +28,48 @@ const THEMES = {
     glow: "bg-purple-400/25",
     ring: "focus-visible:ring-purple-400/60",
   },
+  orange: {
+    borderOpen: "border-orange-300 dark:border-orange-700/60",
+    text: "text-orange-700 dark:text-orange-400",
+    bgSoft: "bg-orange-50 dark:bg-orange-950/40",
+    glow: "bg-orange-400/25",
+    ring: "focus-visible:ring-orange-400/60",
+  },
+  green: {
+    borderOpen: "border-green-300 dark:border-green-700/60",
+    text: "text-green-700 dark:text-green-400",
+    bgSoft: "bg-green-50 dark:bg-green-950/40",
+    glow: "bg-green-400/25",
+    ring: "focus-visible:ring-green-400/60",
+  },
+  blue: {
+    borderOpen: "border-blue-300 dark:border-blue-700/60",
+    text: "text-blue-700 dark:text-blue-400",
+    bgSoft: "bg-blue-50 dark:bg-blue-950/40",
+    glow: "bg-blue-400/25",
+    ring: "focus-visible:ring-blue-400/60",
+  },
+  amber: {
+    borderOpen: "border-amber-300 dark:border-amber-700/60",
+    text: "text-amber-700 dark:text-amber-400",
+    bgSoft: "bg-amber-50 dark:bg-amber-950/40",
+    glow: "bg-amber-400/25",
+    ring: "focus-visible:ring-amber-400/60",
+  },
+  rose: {
+    borderOpen: "border-rose-300 dark:border-rose-700/60",
+    text: "text-rose-700 dark:text-rose-400",
+    bgSoft: "bg-rose-50 dark:bg-rose-950/40",
+    glow: "bg-rose-400/25",
+    ring: "focus-visible:ring-rose-400/60",
+  },
+  teal: {
+    borderOpen: "border-teal-300 dark:border-teal-700/60",
+    text: "text-teal-700 dark:text-teal-400",
+    bgSoft: "bg-teal-50 dark:bg-teal-950/40",
+    glow: "bg-teal-400/25",
+    ring: "focus-visible:ring-teal-400/60",
+  },
 };
 
 export default function AnoAccordionCard({
