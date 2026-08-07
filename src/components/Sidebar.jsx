@@ -9,17 +9,25 @@ const navigation = {
     components: [
       { id: 'modulo-2-intro', title: 'Apresentação do Curso' },
       { id: 'modulo-2-objetivos', title: 'Objetivos do Módulo 2' },
-      { id: 'modulo-2-roteiro', title: 'Roteiro para elaboração do projeto' },
-      { id: 'modulo-2-passo', title: 'Passo a passo' },
-      { id: 'modulo-2-ppda', title: 'Conteúdo do projeto' },
-      { id: 'modulo-2-modelo', title: 'Modelo de projeto' },
       { id: 'modulo-2-ao-final', title: 'Ao final deste módulo' },
     ]
   },
   'Projetos': {
     path: '/projetos',
     components: [
-      { id: 'projetos-intro', title: 'Como planejar projetos' },
+      { id: 'modulo-2-roteiro', title: 'Roteiro para elaboração do projeto' },
+      { id: 'modulo-2-passo', title: 'Passo a passo' },
+      { id: 'modulo-2-ppda', title: 'Conteúdo do projeto' },
+      { id: 'modulo-2-modelo', title: 'Modelo de projeto' },
+      { id: 'projeto-4', title: '4º Ano' },
+      { id: 'projeto-5', title: '5º Ano' },
+      { id: 'projeto-6', title: '6º Ano' },
+      { id: 'projeto-7', title: '7º Ano' },
+      { id: 'projeto-8', title: '8º Ano' },
+      { id: 'projeto-9', title: '9º Ano' },
+      { id: 'projeto-1s', title: '1ª Série' },
+      { id: 'projeto-2s', title: '2ª Série' },
+      { id: 'projeto-3s', title: '3ª Série' },
     ]
   },
   'Matriz de Habilidades': {
@@ -29,6 +37,12 @@ const navigation = {
       { id: 'matriz-2', title: '4º ano' },
       { id: 'matriz-5', title: '5º ano' },
       { id: 'matriz-6', title: '6º ano' },
+      { id: 'matriz-7', title: '7º ano' },
+      { id: 'matriz-8', title: '8º ano' },
+      { id: 'matriz-9', title: '9º ano' },
+      { id: 'matriz-1s', title: '1ª Série' },
+      { id: 'matriz-2s', title: '2ª Série' },
+      { id: 'matriz-3s', title: '3ª Série' },
     ]
   },
   'Ferramentas de Planejamento': {
