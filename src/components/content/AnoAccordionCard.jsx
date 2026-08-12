@@ -53,7 +53,7 @@ export default function AnoAccordionCard({
             {needsUpdate && (
               <div className="absolute inset-0 flex items-center justify-center bg-black/60 rounded-xl">
                 <span className="text-white text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-center leading-tight px-1">
-                  ATUALIZAR
+                  ATUALIZAR IMAGEM
                 </span>
               </div>
             )}
