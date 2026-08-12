@@ -23,6 +23,39 @@ export default function ProjetoAnos() {
 
       <div className="space-y-4">
         <AnoAccordionCard
+          id="projeto-1"
+          ano="1º Ano"
+          subtitulo="Sugestões de atividades de projeto"
+          imagem="/1acapas.png"
+          theme="green"
+          needsUpdate
+        >
+          <Projeto1Serie />
+        </AnoAccordionCard>
+
+        <AnoAccordionCard
+          id="projeto-2"
+          ano="2º Ano"
+          subtitulo="Sugestões de atividades de projeto"
+          imagem="/2acapas.png"
+          theme="orange"
+          needsUpdate
+        >
+          <Projeto2Serie />
+        </AnoAccordionCard>
+
+        <AnoAccordionCard
+          id="projeto-3"
+          ano="3º Ano"
+          subtitulo="Sugestões de atividades de projeto"
+          imagem="/3acapas.png"
+          theme="teal"
+          needsUpdate
+        >
+          <Projeto3Serie />
+        </AnoAccordionCard>
+
+        <AnoAccordionCard
           id="projeto-4"
           ano="4º Ano"
           subtitulo="Sugestões de atividades de projeto"
@@ -80,36 +113,6 @@ export default function ProjetoAnos() {
           theme="amber"
         >
           <Projeto9Ano />
-        </AnoAccordionCard>
-
-        <AnoAccordionCard
-          id="projeto-1s"
-          ano="1ª Série"
-          subtitulo="Sugestões de atividades de projeto"
-          imagem="/1acapas.png"
-          theme="green"
-        >
-          <Projeto1Serie />
-        </AnoAccordionCard>
-
-        <AnoAccordionCard
-          id="projeto-2s"
-          ano="2ª Série"
-          subtitulo="Sugestões de atividades de projeto"
-          imagem="/2acapas.png"
-          theme="orange"
-        >
-          <Projeto2Serie />
-        </AnoAccordionCard>
-
-        <AnoAccordionCard
-          id="projeto-3s"
-          ano="3ª Série"
-          subtitulo="Sugestões de atividades de projeto"
-          imagem="/3acapas.png"
-          theme="teal"
-        >
-          <Projeto3Serie />
         </AnoAccordionCard>
       </div>
     </div>
