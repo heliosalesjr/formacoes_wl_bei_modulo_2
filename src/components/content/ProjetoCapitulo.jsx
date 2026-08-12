@@ -3,7 +3,6 @@ import { THEMES } from "@/components/content/anoThemes";
 
 export default function ProjetoCapitulo({
   theme = "red",
-  numero,
   titulo,
   meta,
   descricao,
@@ -24,10 +23,8 @@ export default function ProjetoCapitulo({
       )}
 
       <span
-        className={`relative z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full text-sm font-bold text-white shadow-sm ${t.solid}`}
-      >
-        {numero}
-      </span>
+        className={`relative z-10 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full shadow-sm ${t.solid}`}
+      />
 
       <div
         className={`min-w-0 flex-1 pt-1 ${
