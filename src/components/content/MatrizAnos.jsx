@@ -23,7 +23,40 @@ export default function MatrizAnos() {
 
       <div className="space-y-4">
         <AnoAccordionCard
+          id="matriz-1"
+          ano="1º Ano"
+          subtitulo="Objetos de Conhecimento e habilidades da BNCC"
+          imagem="/1acapas.png"
+          theme="green"
+          needsUpdate
+        >
+          <Matriz1Serie />
+        </AnoAccordionCard>
+
+        <AnoAccordionCard
           id="matriz-2"
+          ano="2º Ano"
+          subtitulo="Objetos de Conhecimento e habilidades da BNCC"
+          imagem="/2acapas.png"
+          theme="orange"
+          needsUpdate
+        >
+          <Matriz2Serie />
+        </AnoAccordionCard>
+
+        <AnoAccordionCard
+          id="matriz-3"
+          ano="3º Ano"
+          subtitulo="Objetos de Conhecimento e habilidades da BNCC"
+          imagem="/3acapas.png"
+          theme="teal"
+          needsUpdate
+        >
+          <Matriz3Serie />
+        </AnoAccordionCard>
+
+        <AnoAccordionCard
+          id="matriz-4"
           ano="4º Ano"
           subtitulo="Objetos de Conhecimento e habilidades da BNCC"
           imagem="/livros4o.png"
@@ -80,36 +113,6 @@ export default function MatrizAnos() {
           theme="amber"
         >
           <Matriz9 />
-        </AnoAccordionCard>
-
-        <AnoAccordionCard
-          id="matriz-1s"
-          ano="1ª Série"
-          subtitulo="Objetos de Conhecimento e habilidades da BNCC"
-          imagem="/1acapas.png"
-          theme="green"
-        >
-          <Matriz1Serie />
-        </AnoAccordionCard>
-
-        <AnoAccordionCard
-          id="matriz-2s"
-          ano="2ª Série"
-          subtitulo="Objetos de Conhecimento e habilidades da BNCC"
-          imagem="/2acapas.png"
-          theme="orange"
-        >
-          <Matriz2Serie />
-        </AnoAccordionCard>
-
-        <AnoAccordionCard
-          id="matriz-3s"
-          ano="3ª Série"
-          subtitulo="Objetos de Conhecimento e habilidades da BNCC"
-          imagem="/3acapas.png"
-          theme="teal"
-        >
-          <Matriz3Serie />
         </AnoAccordionCard>
       </div>
     </div>
