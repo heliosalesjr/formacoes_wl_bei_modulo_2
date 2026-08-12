@@ -39,12 +39,13 @@ const Modulo2Intro = () => {
             className="w-full h-full"
           >
             {images.map((img, idx) => (
-              <SwiperSlide key={idx} className="relative">
+              <SwiperSlide key={idx} className="relative h-full">
                 <Image
                   src={`/${img}`}
                   alt={`Slide ${idx + 1}`}
                   fill
-                  sizes="(max-width: 768px) 100vw, 768px"
+                  sizes="100vw"
+                  quality={90}
                   className="object-cover object-center"
                 />
               </SwiperSlide>
