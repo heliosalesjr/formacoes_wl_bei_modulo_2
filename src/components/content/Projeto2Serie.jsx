@@ -1,6 +1,6 @@
 import ProjetoCapitulo from "@/components/content/ProjetoCapitulo";
 
-const THEME = "orange";
+const THEME = "green";
 
 const parte1 = [
   {
@@ -65,11 +65,11 @@ const parte3 = [
 function Divider({ titulo }) {
   return (
     <div className="flex items-center justify-center gap-3 pb-6 pt-4 border-t border-dashed border-slate-200 dark:border-slate-700 first:border-0 first:pt-0">
-      <span className="h-px w-8 bg-orange-300 dark:bg-orange-800" />
-      <p className="text-sm font-semibold uppercase tracking-widest text-orange-600 dark:text-orange-400">
+      <span className="h-px w-8 bg-green-300 dark:bg-green-800" />
+      <p className="text-sm font-semibold uppercase tracking-widest text-green-600 dark:text-green-400">
         {titulo}
       </p>
-      <span className="h-px w-8 bg-orange-300 dark:bg-orange-800" />
+      <span className="h-px w-8 bg-green-300 dark:bg-green-800" />
     </div>
   );
 }

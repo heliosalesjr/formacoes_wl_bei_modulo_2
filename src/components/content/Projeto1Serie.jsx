@@ -1,6 +1,6 @@
 import ProjetoCapitulo from "@/components/content/ProjetoCapitulo";
 
-const THEME = "green";
+const THEME = "orange";
 
 const parte1 = [
   {
@@ -56,11 +56,11 @@ export default function Projeto1Serie() {
     <div className="space-y-10">
       <div>
         <div className="flex items-center justify-center gap-3 pb-6">
-          <span className="h-px w-8 bg-green-300 dark:bg-green-800" />
-          <p className="text-sm font-semibold uppercase tracking-widest text-green-600 dark:text-green-400">
+          <span className="h-px w-8 bg-orange-300 dark:bg-orange-800" />
+          <p className="text-sm font-semibold uppercase tracking-widest text-orange-600 dark:text-orange-400">
             Parte 1
           </p>
-          <span className="h-px w-8 bg-green-300 dark:bg-green-800" />
+          <span className="h-px w-8 bg-orange-300 dark:bg-orange-800" />
         </div>
         <div>
           {parte1.map((cap, i) => (
@@ -71,11 +71,11 @@ export default function Projeto1Serie() {
 
       <div>
         <div className="flex items-center justify-center gap-3 pb-6 pt-4 border-t border-dashed border-slate-200 dark:border-slate-700">
-          <span className="h-px w-8 bg-green-300 dark:bg-green-800" />
-          <p className="text-sm font-semibold uppercase tracking-widest text-green-600 dark:text-green-400">
+          <span className="h-px w-8 bg-orange-300 dark:bg-orange-800" />
+          <p className="text-sm font-semibold uppercase tracking-widest text-orange-600 dark:text-orange-400">
             Parte 2
           </p>
-          <span className="h-px w-8 bg-green-300 dark:bg-green-800" />
+          <span className="h-px w-8 bg-orange-300 dark:bg-orange-800" />
         </div>
         <div>
           {parte2.map((cap, i) => (

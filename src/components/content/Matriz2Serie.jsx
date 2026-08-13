@@ -156,16 +156,16 @@ function TabelaParte({ titulo, objetivos, capitulos, titulosCapitulos, offset })
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-center gap-3 pt-4 border-t border-dashed border-slate-200 dark:border-slate-700 first:border-0 first:pt-0">
-        <span className="h-px w-8 bg-orange-300 dark:bg-orange-800" />
-        <p className="text-sm font-semibold uppercase tracking-widest text-orange-600 dark:text-orange-400">
+        <span className="h-px w-8 bg-green-300 dark:bg-green-800" />
+        <p className="text-sm font-semibold uppercase tracking-widest text-green-600 dark:text-green-400">
           {titulo}
         </p>
-        <span className="h-px w-8 bg-orange-300 dark:bg-orange-800" />
+        <span className="h-px w-8 bg-green-300 dark:bg-green-800" />
       </div>
 
       <div className="overflow-auto rounded-xl border dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
         <table className="w-full text-left text-sm md:text-base">
-          <thead className="bg-orange-100 dark:bg-orange-950 text-orange-700 dark:text-orange-300 font-semibold">
+          <thead className="bg-green-100 dark:bg-green-950 text-green-700 dark:text-green-300 font-semibold">
             <tr>
               <th className="p-3">Objetivo de Conhecimento</th>
               {capitulos.map((n) => (
@@ -185,11 +185,11 @@ function TabelaParte({ titulo, objetivos, capitulos, titulosCapitulos, offset })
 
           <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
             {objetivos.map((obj, i) => (
-              <tr key={i} className="hover:bg-orange-50/40 dark:hover:bg-orange-950/40 transition">
+              <tr key={i} className="hover:bg-green-50/40 dark:hover:bg-green-950/40 transition">
                 <td className="p-3">
                   <span className="font-medium text-slate-800 dark:text-slate-100">{obj.label}</span>
                   {obj.code && (
-                    <span className="text-orange-600 dark:text-orange-400 font-semibold ml-2">
+                    <span className="text-green-600 dark:text-green-400 font-semibold ml-2">
                       ({obj.code})
                     </span>
                   )}

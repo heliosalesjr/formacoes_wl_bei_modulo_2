@@ -27,7 +27,7 @@ export default function ProjetoAnos() {
           ano="1º Ano"
           subtitulo="Sugestões de atividades de projeto"
           imagem="/capas_1o_ano.png"
-          theme="green"
+          theme="orange"
         >
           <Projeto1Serie />
         </AnoAccordionCard>
@@ -37,7 +37,7 @@ export default function ProjetoAnos() {
           ano="2º Ano"
           subtitulo="Sugestões de atividades de projeto"
           imagem="/capas_2o_ano.png"
-          theme="orange"
+          theme="green"
         >
           <Projeto2Serie />
         </AnoAccordionCard>
@@ -47,7 +47,7 @@ export default function ProjetoAnos() {
           ano="3º Ano"
           subtitulo="Sugestões de atividades de projeto"
           imagem="/capas_3o_ano.png"
-          theme="teal"
+          theme="blue"
         >
           <Projeto3Serie />
         </AnoAccordionCard>

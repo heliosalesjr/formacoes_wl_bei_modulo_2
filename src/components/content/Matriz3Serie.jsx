@@ -308,16 +308,16 @@ function TabelaParte({ titulo, objetivos, capitulos, titulosCapitulos, offset })
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-center gap-3 pt-4 border-t border-dashed border-slate-200 dark:border-slate-700 first:border-0 first:pt-0">
-        <span className="h-px w-8 bg-teal-300 dark:bg-teal-800" />
-        <p className="text-sm font-semibold uppercase tracking-widest text-teal-600 dark:text-teal-400">
+        <span className="h-px w-8 bg-blue-300 dark:bg-blue-800" />
+        <p className="text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">
           {titulo}
         </p>
-        <span className="h-px w-8 bg-teal-300 dark:bg-teal-800" />
+        <span className="h-px w-8 bg-blue-300 dark:bg-blue-800" />
       </div>
 
       <div className="overflow-auto rounded-xl border dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
         <table className="w-full text-left text-sm md:text-base">
-          <thead className="bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 font-semibold">
+          <thead className="bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-semibold">
             <tr>
               <th className="p-3">Objetivo de Conhecimento</th>
               {capitulos.map((n) => (
@@ -337,11 +337,11 @@ function TabelaParte({ titulo, objetivos, capitulos, titulosCapitulos, offset })
 
           <tbody className="divide-y divide-slate-200 dark:divide-slate-700">
             {objetivos.map((obj, i) => (
-              <tr key={i} className="hover:bg-teal-50/40 dark:hover:bg-teal-950/40 transition">
+              <tr key={i} className="hover:bg-blue-50/40 dark:hover:bg-blue-950/40 transition">
                 <td className="p-3">
                   <span className="font-medium text-slate-800 dark:text-slate-100">{obj.label}</span>
                   {obj.code && (
-                    <span className="text-teal-600 dark:text-teal-400 font-semibold ml-2">
+                    <span className="text-blue-600 dark:text-blue-400 font-semibold ml-2">
                       ({obj.code})
                     </span>
                   )}
