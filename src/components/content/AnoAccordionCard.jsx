@@ -49,7 +49,7 @@ export default function AnoAccordionCard({
           className={`relative z-10 flex w-full items-center gap-4 p-4 md:p-5 text-left cursor-pointer group focus-visible:outline-none focus-visible:ring-2 ${t.ring} rounded-2xl`}
         >
           <div className="relative h-16 w-16 md:h-20 md:w-20 flex-shrink-0 overflow-hidden rounded-xl shadow-md ring-1 ring-black/5 dark:ring-white/10 transition-transform duration-300 group-hover:scale-105">
-            <Image src={imagem} alt={`Livros do ${ano}`} fill sizes="80px" className="object-cover" />
+            <Image src={imagem} alt={`Livros do ${ano}`} fill sizes="(min-width: 768px) 80px, 64px" quality={90} className="object-cover" />
             {needsUpdate && (
               <div className="absolute inset-0 flex items-center justify-center bg-black/60 rounded-xl">
                 <span className="text-white text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-center leading-tight px-1">
