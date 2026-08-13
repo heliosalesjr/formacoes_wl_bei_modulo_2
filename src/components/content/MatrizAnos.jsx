@@ -26,9 +26,8 @@ export default function MatrizAnos() {
           id="matriz-1"
           ano="1º Ano"
           subtitulo="Objetos de Conhecimento e habilidades da BNCC"
-          imagem="/1acapas.png"
+          imagem="/capas_1o_ano.png"
           theme="green"
-          needsUpdate
         >
           <Matriz1Serie />
         </AnoAccordionCard>
@@ -37,9 +36,8 @@ export default function MatrizAnos() {
           id="matriz-2"
           ano="2º Ano"
           subtitulo="Objetos de Conhecimento e habilidades da BNCC"
-          imagem="/2acapas.png"
+          imagem="/capas_2o_ano.png"
           theme="orange"
-          needsUpdate
         >
           <Matriz2Serie />
         </AnoAccordionCard>
@@ -48,9 +46,8 @@ export default function MatrizAnos() {
           id="matriz-3"
           ano="3º Ano"
           subtitulo="Objetos de Conhecimento e habilidades da BNCC"
-          imagem="/3acapas.png"
+          imagem="/capas_3o_ano.png"
           theme="teal"
-          needsUpdate
         >
           <Matriz3Serie />
         </AnoAccordionCard>
