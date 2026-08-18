@@ -8,7 +8,7 @@ const cap2 = [
     titulo: "Pesquisa de preços",
     descricao:
       "O projeto convida os alunos a iniciarem a organização de uma festa de aniversário da turma. Eles precisam realizar uma pesquisa de preços em dois mercados diferentes, registrando tudo o que descobrirem. A atividade introduz, na prática, o conceito de comparação de preços e mostra como esse hábito ajuda a tomar decisões de compra mais conscientes e econômicas.",
-    pagina: "página 26",
+    pagina: "Estudante, página 26",
   },
 ];
 
@@ -18,7 +18,7 @@ const cap3 = [
     titulo: "Embalagem grande ou pequena?",
     descricao:
       "Os alunos devem visitar um mercado para comparar preços e tamanhos de embalagens do mesmo produto, observando se compensa mais comprar a versão grande ou a pequena. Eles anotam marca, peso/volume e preço de achocolatado e refrigerantes, comparando produtos iguais sempre que possível.",
-    pagina: "página 42",
+    pagina: "Estudante, página 42",
     foto: "/piggyb.webp",
   },
 ];
@@ -29,14 +29,14 @@ const cap4 = [
     titulo: "Dividindo com os amigos",
     descricao:
       "Nesta etapa do projeto da festa, os alunos aprendem a planejar a quantidade de comida e bebida necessária para todos os participantes. Eles escolhem um salgado, um doce e uma bebida e registram no quadro. Depois, definem a quantidade por estudante e multiplicam pelos participantes, calculando a quantidade total a ser comprada.",
-    pagina: "página 48",
+    pagina: "Estudante, página 48",
   },
   {
     numero: 4,
     titulo: "O orçamento da festa",
     descricao:
       "A turma define, junto com a professora, um valor total de orçamento para a festa. Em grupos, escolhem comidas, bebidas, ingredientes e quantidades, pesquisam preços e montam suas tabelas de orçamento, cuidando para não ultrapassar o limite. Depois, apresentam e decidem se combinam ideias ou votam em um único orçamento coletivo.",
-    pagina: "página 56",
+    pagina: "Estudante, página 56",
   },
 ];
 
@@ -46,7 +46,7 @@ const cap5 = [
     titulo: "Criando minha própria loja",
     descricao:
       "Os alunos imaginam que possuem sua própria loja, escolhem o que gostariam de vender e criam um cartaz ilustrando sua loja e produtos. Depois, conversam com colegas sobre outras ideias de negócio, anotam cinco sugestões e circulam a que mais chamou sua atenção. A proposta estimula criatividade, visão empreendedora e troca de ideias.",
-    pagina: "página 75",
+    pagina: "Estudante, página 75",
   },
 ];
 
@@ -56,7 +56,7 @@ const cap6 = [
     titulo: "Exposição das propagandas",
     descricao:
       "Após produzirem diversas propagandas ao longo do ano, os alunos organizam uma exposição com as peças criadas. Definem data, local e forma de organização (por tema, ordem cronológica ou outro critério). Depois, criam um cartaz de divulgação e espalham pela escola, convidando a comunidade.",
-    pagina: "página 90",
+    pagina: "Estudante, página 90",
   },
 ];
 
