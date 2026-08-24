@@ -25,8 +25,8 @@ const EncerramentoIntro = () => {
       <div className="relative w-full pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-lg">
         <iframe
           className="absolute top-0 left-0 w-full h-full"
-          src="https://www.youtube.com/embed/6QVRbZvtHfw"
-          title="Resumo Módulo 1"
+          src="https://www.youtube.com/embed/PvFMo9R1_8s"
+          title="Encerramento Módulo 2"
           allowFullScreen
         ></iframe>
       </div>

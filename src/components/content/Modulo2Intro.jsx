@@ -92,8 +92,8 @@ const Modulo2Intro = () => {
         <div className="relative w-full pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-lg">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
-            src="https://www.youtube.com/embed/42BVLPl0xw8"
-            title="Resumo Módulo 1"
+            src="https://www.youtube.com/embed/5jpg68knJ0o"
+            title="Apresentação Módulo 2"
             allowFullScreen
           ></iframe>
         </div>
