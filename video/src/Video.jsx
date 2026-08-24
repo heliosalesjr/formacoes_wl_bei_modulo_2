@@ -1,22 +1,15 @@
 import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
 import { Opening } from "./scenes/Opening";
-import { ModuloTitle } from "./scenes/ModuloTitle";
-import { CourseIntro } from "./scenes/CourseIntro";
-import { Objectives } from "./scenes/Objectives";
-import { SmartDiagram } from "./scenes/SmartDiagram";
-import { FiveW2H } from "./scenes/FiveW2H";
-import { Closing } from "./scenes/Closing";
+import { PhraseBooks } from "./scenes/PhraseBooks";
+import { BulletList } from "./scenes/BulletList";
+import { TeoriaPratica } from "./scenes/TeoriaPratica";
 
-// Timing das cenas (frames @ 30fps)
-// Ajuste os valores conforme necessário após ver o preview
+// 30fps — total: 1305 frames = 43.5s (áudio 40.5s + 3s de silêncio no final)
 const SCENES = {
-  opening:      { from: 0,    duration: 240 },  // 0s  → 8s
-  moduloTitle:  { from: 240,  duration: 270 },  // 8s  → 17s
-  courseIntro:  { from: 510,  duration: 270 },  // 17s → 26s
-  objectives:   { from: 780,  duration: 300 },  // 26s → 36s
-  smart:        { from: 1080, duration: 300 },  // 36s → 46s
-  fiveW2H:      { from: 1380, duration: 270 },  // 46s → 55s
-  closing:      { from: 1650, duration: 150 },  // 55s → 60s
+  opening:      { from: 0,    duration: 240 },  // 0s    → 8s
+  phraseBooks:  { from: 240,  duration: 225 },  // 8s    → 15.5s
+  bulletList:   { from: 465,  duration: 465 },  // 15.5s → 31s
+  teoriaPratica:{ from: 930,  duration: 375 },  // 31s   → 43.5s
 };
 
 const FONTS = `
@@ -54,28 +47,16 @@ export const VideoComposition = () => {
         <Opening />
       </Sequence>
 
-      <Sequence from={SCENES.moduloTitle.from} durationInFrames={SCENES.moduloTitle.duration}>
-        <ModuloTitle />
+      <Sequence from={SCENES.phraseBooks.from} durationInFrames={SCENES.phraseBooks.duration}>
+        <PhraseBooks />
       </Sequence>
 
-      <Sequence from={SCENES.courseIntro.from} durationInFrames={SCENES.courseIntro.duration}>
-        <CourseIntro />
+      <Sequence from={SCENES.bulletList.from} durationInFrames={SCENES.bulletList.duration}>
+        <BulletList />
       </Sequence>
 
-      <Sequence from={SCENES.objectives.from} durationInFrames={SCENES.objectives.duration}>
-        <Objectives />
-      </Sequence>
-
-      <Sequence from={SCENES.smart.from} durationInFrames={SCENES.smart.duration}>
-        <SmartDiagram />
-      </Sequence>
-
-      <Sequence from={SCENES.fiveW2H.from} durationInFrames={SCENES.fiveW2H.duration}>
-        <FiveW2H />
-      </Sequence>
-
-      <Sequence from={SCENES.closing.from} durationInFrames={SCENES.closing.duration}>
-        <Closing />
+      <Sequence from={SCENES.teoriaPratica.from} durationInFrames={SCENES.teoriaPratica.duration}>
+        <TeoriaPratica />
       </Sequence>
     </AbsoluteFill>
   );
