@@ -5,6 +5,7 @@
   "scripts": {
     "start": "remotion preview src/Root.jsx",
     "render": "remotion render src/Root.jsx Modulo2Intro output/video.mp4 --codec h264",
+    "render-encerramento": "remotion render src/Root.jsx Modulo2Encerramento output/encerramento.mp4 --codec h264",
     "render-gif": "remotion render src/Root.jsx Modulo2Intro output/preview.gif --codec gif"
   },
   "dependencies": {
