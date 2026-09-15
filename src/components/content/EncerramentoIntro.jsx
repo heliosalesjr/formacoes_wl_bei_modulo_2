@@ -105,7 +105,6 @@ const EncerramentoIntro = () => {
                           <span>{link}</span>
                           <FaExternalLinkAlt className="w-2.5 h-2.5 flex-shrink-0" />
                         </a>
-                        .
                       </>
                     )}
                   </div>
